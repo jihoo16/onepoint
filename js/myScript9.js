@@ -281,21 +281,27 @@ $(function(){
 
 	five.hide();
 	thirdinwrap.hide();
-	
+
+
 	function animateddd() {
-		thirdinwrap1.fadeIn(0).delay(3000).fadeOut(0);
-		five1.fadeIn(0).delay(3000).fadeOut(0);
-		thirdinwrap2.delay(3000).fadeIn(0).delay(3000).fadeOut(0);
-		five2.delay(3000).fadeIn(0).delay(3000).fadeOut(0);
-		thirdinwrap3.delay(6000).fadeIn(0).delay(3000).fadeOut(0);
-		five3.delay(6000).fadeIn(0).delay(3000).fadeOut(0);
+		
+		thirdinwrap1.stop().show(0).delay(3000).hide(0);
+		five1.stop().show(0).delay(3000).hide(0);
+		thirdinwrap2.stop().delay(3000).show(0).delay(2990).hide(0);
+		five2.stop().delay(3000).show(0).delay(2990).hide(0);
+		thirdinwrap3.stop().delay(6000).show(0).delay(3000).hide(0);
+		five3.stop().delay(6000).show(0).delay(3000).hide(0);
+
+
 		animateValue(obj, 0, 98, 1000,3000);
 		animateValue(obj2, 0, 87, 1000,3000);
 		animateValue(obj3, 0, 75, 1000,3000);
+		
+
+		
 	}
 	
 	animateddd();
-	let coo = 0;
 	function startAnimation() {
 
 		timeInterval = setInterval(function () {
@@ -303,15 +309,15 @@ $(function(){
 			five.hide();
 			thirdinwrap.hide().stop();
 			thirdinwrap.hide();
-			thirdinwrap1.fadeIn(0).delay(3000).fadeOut(0);
-			five1.fadeIn(0).delay(3000).fadeOut(0);
-			thirdinwrap2.delay(3000).show(0).delay(3000).hide(0);
-			five2.delay(3000).show(0).delay(3000).hide(0);
+			thirdinwrap1.stop().show(0).delay(3000).hide(0);
+			five1.stop().show(0).delay(3000).hide(0);
+			thirdinwrap2.stop().delay(3000).show(0).delay(2990).hide(0);
+			five2.stop().delay(3000).show(0).delay(2990).hide(0);
 			animateValue(obj, 0, 98, 1000,3000);
 			animateValue(obj2, 0, 87, 1000,3000);
 			animateValue(obj3, 0, 75, 1000,3000);
-			thirdinwrap3.delay(6000).show(0).delay(3000).hide(0);
-			five3.delay(6000).show(0).delay(3000).hide(0);
+			thirdinwrap3.stop().delay(6000).show(0).delay(2999).hide(0);
+			five3.stop().delay(6000).show(0).delay(2999).hide(0);
 		}, 9000);
 	}
 
@@ -326,8 +332,15 @@ $(function(){
 		thirdinwrap.hide().stop();
 		thirdinwrap.hide();
 
-		thirdinwrap1.delay(0).fadeIn(0);
-		five1.delay(0).fadeIn(0);
+		thirdinwrap1.stop().delay(0).show(0).delay(3000).hide(0);
+		five1.stop().delay(0).show(0).delay(3000).hide(0);
+		five2.stop().delay(3000).show(0).delay(2990).hide(0);
+		animateValue(obj, 0, 98, 1000,3000);
+		animateValue(obj2, 0, 87, 1000,3000);
+		animateValue(obj3, 0, 75, 1000,3000);
+		thirdinwrap2.stop().delay(3000).show(0).delay(2990).hide(0);
+		thirdinwrap3.stop().delay(6000).show(0).delay(3000).hide(0);
+		five3.stop().delay(6000).show(0).delay(3000).hide(0);
 		startAnimation();
 	});
 
@@ -337,13 +350,15 @@ $(function(){
 		five.hide();
 		thirdinwrap.hide().stop();
 		thirdinwrap.hide();
+		
 		animateValue(obj, 0, 98, 1000,0);
 		animateValue(obj2, 0, 87, 1000,0);
 		animateValue(obj3, 0, 75, 1000,0);
-		thirdinwrap2.stop().show();
-		
-		five2.stop().show();
-		
+		thirdinwrap2.stop().delay(0).show(0).delay(4990).hide(0);
+		five2.stop().delay(0).show(0).delay(4990).hide(0);
+		five3.stop().delay(5000).show(0).delay(4000).hide(0);
+
+		thirdinwrap3.stop().delay(5000).show(0).delay(4000).hide(0);
 		startAnimation();
 	});
 
@@ -355,13 +370,22 @@ $(function(){
 		thirdinwrap.hide().stop();
 		thirdinwrap.hide();
 
-		thirdinwrap3.stop().show();
-		five3.stop().show();
-		
+		thirdinwrap3.stop().delay(0).show(0).delay(3000).hide(0);
+		five3.stop().delay(0).show(0).delay(3000).hide(0);
+		five1.stop().delay(3000).show(0).delay(3000).hide(0);
+		animateValue(obj, 0, 98, 1000,6000);
+		animateValue(obj2, 0, 87, 1000,6000);
+		animateValue(obj3, 0, 75, 1000,6000);
+		thirdinwrap1.stop().delay(3000).show(0).delay(3000).hide(0);
+		thirdinwrap2.stop().delay(6000).show(0).delay(2990).hide(0);
+		five2.stop().delay(6000).show(0).delay(2990).hide(0);
 
 
 		startAnimation();
 
 	});
+	
+
+
 
 });

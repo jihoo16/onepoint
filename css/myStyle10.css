@@ -32,7 +32,31 @@ a{
 	background-color: #070707;
 
 }
-
+.font24{
+	font-size: 24px;
+}
+.font20{
+	font-size: 20px;
+}
+.font42{
+	font-weight: 900;
+	font-size: 42px;
+}
+.font18{
+	font-size: 18px;
+}
+.font14{
+	font-size:14px;
+}
+.colorw{
+	color: white;
+}
+.colorp{
+	color: #087eff;
+}
+.colorb{
+	color: #070707;
+}
 /*헤더 css*/
 
 
@@ -511,7 +535,7 @@ display: flex;
 	height: 190px;
 	position: absolute;
 	top: 20px;
-	right: 30px;
+	right: 10px;
 }
 #hard .text-bg-primary {
 	width: 100%;
@@ -765,7 +789,7 @@ margin-right: 5%;
 	cursor: pointer;
 }
 .fivethirdwrap{
-	width: 60%;
+/*	width: 60%;*/
 /*	border: 1px solid red;*/
 display: flex;
 background-color: #1b212d;
@@ -773,6 +797,7 @@ border-radius: 50px;
 padding: 50px;
 
 }
+
 
 .fivethird{
 	width: 120%;
@@ -819,6 +844,8 @@ margin: 10px auto;
 	margin: 1%;
 }
 .imgsize{
+	position: relative;
+	left: -1%;
 	width: 45%;
 	margin-right: 3%;
 }
@@ -831,7 +858,7 @@ margin: 10px auto;
 	width: 30%;
 	height: 30%;
 	font-size: 1.5vw;
-	margin-left: 15px;
+	margin-left: 1%;
 }
 .protext div{
 	display: inline;
@@ -853,11 +880,12 @@ margin: 10px auto;
 span.toggleon{
 	position: absolute;
 	right: 0;
+	top: -20px;
 	color: #087eff;
 	visibility: hidden;
 	animation: on 1s forwards;
 	animation-delay: 1s;
-	font-size: 6vw;
+	font-size: 6em;
 	cursor: auto ;
 
 }
@@ -868,8 +896,9 @@ span.toggleon{
 span.toggleoff{
 	position: absolute;
 	right: 0;
+	top: -20px;
 	animation: off 1s forwards;
-	font-size: 6vw;
+	font-size: 6em;
 	cursor: auto ;
 }
 @keyframes off{
@@ -902,16 +931,17 @@ padding: 5px 10px;
 
 }
 #five{
-	height: 600px;
+	height: 800px;
+	margin-bottom: 300px;
 }
 /*#6번째 섹션**********************/
 #six{
 	width: 100%;
 	background-color: #2b7ee8;
 /*	overflow: hidden;*/
-height: 800px;
+height: 700px;
 position: relative;
-top: 300px;
+margin-bottom: 300px;
 }
 .siximg1{
 	width: 400px;
@@ -934,9 +964,9 @@ top: 300px;
 .sixwrap{
 	height: 100%;
 /*	border: 1px solid orange;*/
-	margin: 20% 5%;
-	position: relative;
-	top: 100px;
+margin: 20% 5%;
+position: relative;
+top: 100px;
 }
 .sixin1{
 
@@ -958,7 +988,7 @@ top: 300px;
 	margin-right: 3%;
 	margin-left: 2%;
 	float: left;
-	transition: all 1s;
+	transition: all 0.3s;
 }
 .sixin2cardimg{
 	margin-bottom: 50px;
@@ -970,10 +1000,120 @@ top: 300px;
 .sixin2cardspan{
 	font-size: 16px;
 }
+/*best Practice********************************************/
+#seven{
+	height: 1000px;
+}
+.sevenwrap{
+	width: 80%;
+	margin: 0 auto;
+}
+.headtext, .headp{
+	width: 50%;
+	color: white;
+	text-align: center;
+	margin: 0 auto;
+	
+}
+.headtext{
+	font-size: 42px;
+	font-weight: 900;
+}
+.headp{
+	color: gray;
+	margin-top: 5%;
+}
+.sevencardwrap{
+	width: 100%;	
+	margin-top: 200px;
+}
+.sevencardwrap a{
+	width: 46%;
+	float: left;
+	margin: 2%;
+}
+.scw{
+	width: 100%;
+}
+.sevencardwrap a:nth-child(even){
+	margin-top: 150px;
+}
+.sevenCardNumber{
+	width: 25px;
+	height: 25px;
+	border: 1px solid white;
+	border-radius: 50%;
+	text-align: center;
+	margin-right: 4%;
+	float: left;
+}
+.sevenText{
+	width: 70%;
+	display: inline-block;
+	float: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.sevenArrow{
+	width: 15%;
+	float: left;
+	position: relative;
+	top: 60px;
+	text-align: right;
+}
+.sevenButton{
+	position: relative;
+	width: 110px;
+	height: 40px;
+	margin-left: 10%;
+	border: 1px solid #087eff;
+	line-height: 30px;
+	padding: 5px;
+	border-radius: 50px;
+	text-align: center;
+	margin-top: 3%;
+	margin-bottom: 3%;
+	font-size: 14px;
+	clear: left;
+	top: 20px;
+}
+.sevenImg{
+	margin: 5%;
+	width: 100%;
+}
+.sevenImg img{
+	margin-top: 10px;
+	width: 100%;
+}
+.plusbtn{
+	width: 200px;
+	height: 60px;
+	display: inline-block;
+	border: 1px	solid white;
+	border-radius: 50px;
+	line-height: 55px;
+	text-align: center;
+	position: relative;
+	left: 50%;
+	margin-top: 100px;
+	margin-left: -100px;
+}
+.plusbtn a{
+	text-align: center;
+	width: 100%;
+	left: 50%;
+	margin-left: -5px;
+}
 /***************************************************/
 /******************미디어 커리***********************/
 /***************************************************/
 /*****************************큰모니터 크기*************/
+@media screen and (min-width:1200px){
+	.sevenwrap{
+		width: 90%;	
+	}	
+}
 @media screen and (min-width:960px){
 
 	.hamburger {
@@ -993,6 +1133,12 @@ top: 300px;
 	}
 	.bar2{
 		display: none;
+	}
+	.sevenwrap{
+		width: 90%;	
+	}
+	.sevencardwrap a{
+		width: 90%;	
 	}
 }
 /*****************************작은 모니터 크기*************/
@@ -1055,6 +1201,13 @@ top: 300px;
 		height: 120px;
 		bottom:100px;
 	}
+	#hard img,#hardani3 img,#hardani4 img{
+		width: 100px;
+		height: 190px;
+		position: absolute;
+		top: 10px;
+		right: 5px;
+	}
 	#topPro h2{
 		width: 450px;
 		margin: 0 auto;
@@ -1107,6 +1260,7 @@ top: 300px;
 	}
 	.fivewrap{
 		width: 90%;
+		
 	}
 	.fivesecondwrapin{
 		height: 100%;
@@ -1120,9 +1274,6 @@ top: 300px;
 	.thirdinwrapone,.thirdinwraptwo,.thirdinwrapthree{
 		width: 90%;
 		margin: 0 auto;
-	}
-	.hidewrap{
-		display: block!important;
 	}
 	.protext {
 		position: relative;
@@ -1153,7 +1304,7 @@ top: 300px;
 		height: 1200px;
 	}
 	.sixin2{
-	
+
 	}
 	.videocon{
 		height: 50%;
@@ -1257,6 +1408,12 @@ top: 300px;
 		left: 200%;
 
 
+	}
+	#hard img,#hardani3 img,#hardani4 img{
+		width: 80px;
+		position: absolute;
+		top: 0px;
+		right: 0px;
 	}
 	#topPro #blueborderbox_wrap{
 		display: none !important;
@@ -1402,9 +1559,11 @@ top: 300px;
 		height: 50%;
 	}
 	span.toggleon{
-		font-size: 6em;
+		top: -20px;
+		font-size: 5em;
 	}
 	span.toggleoff{
-		font-size: 6em;
+		top: -20px;
+		font-size: 5em;
 	}
 }
