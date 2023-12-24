@@ -724,6 +724,7 @@ background-color: red;
 .material-symbols-outlined{
 	font-size: 50px;
 	cursor: pointer;
+	line-height: 25px;
 }
 /*네번째 섹션 #forth******************************/
 #forth{
