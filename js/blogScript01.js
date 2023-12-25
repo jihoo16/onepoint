@@ -44,8 +44,8 @@ $(function(){
 			var x = e.offsetX;
 			var y = e.offsetY;
 			console.log(x, y);
-			var rotateY = 4 / -30 * x + 35;
-			var rotateX = 1 / -5 * y + 35;
+			var rotateY = 1 / -12 * x + 15;
+			var rotateX = 1 / -5 * y + 15;
 			blogCard.style.transform = `perspective(750px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
 		});
 
