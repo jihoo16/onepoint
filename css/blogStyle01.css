@@ -78,7 +78,9 @@ h1{
 	width: 100%;
 }
 /*헤더 css*/
-
+header{
+	margin-bottom: 50px;
+}
 /*네비게이션 바 css--------------------------------------------------------*/
 .headerwrap{
 	width: 95%;
@@ -340,9 +342,7 @@ footer{
 /*****************************스마트폰 크기*************/
 @media screen and (max-width:767px){
 	/*헤더 스마트폰 미디어 커리 -----------------------------------------*/
-	header{
-		margin-bottom: 50px;
-	}
+	
 	.headerwrap img{
 		width: 138px;
 	}
