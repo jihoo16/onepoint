@@ -87,7 +87,7 @@ header{
 	height: 100px;
 	display: flex;
 	justify-content: space-between;
-	position: fixed;
+	position: relative;
 	z-index: 999;
 	background-color: none;
 	overflow: hidden;
@@ -97,7 +97,7 @@ header{
 	display: flex;
 	justify-content: center;
 	position: relative;
-
+	overflow: hidden;
 }
 #logo{
 	padding: 20px;
@@ -1776,6 +1776,7 @@ footer{
 	.sevencardwrap a{
 		width: 100%;
 		margin-top: 50px;
+		overflow: hidden;
 	}
 	.sevencardwrap a:nth-child(even) {
 		margin-top: 50px;

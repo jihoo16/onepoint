@@ -446,7 +446,18 @@ $(function(){
 		})
 	}
 
-	
+	var header = $('#headerdiv');
+	var isFixed = false;
 
-
+      // Change position based on wheel direction
+	$(window).on("wheel", function (event) {
+		if (event.originalEvent.deltaY > 0 && !isFixed) {
+			header.css('position', 'relative');
+			isFixed = true;
+		} else if (event.originalEvent.deltaY < 0 && isFixed) {
+			
+			header.css('position', 'fixed');
+			isFixed = false;
+		}
+	});
 });
