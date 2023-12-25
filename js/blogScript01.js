@@ -37,5 +37,21 @@ $(function(){
 		$('html, body').animate({ scrollTop: 0 }, 800);
 		return false;
 	});
+	var blogCards = document.querySelectorAll('.blogCard');
+
+	blogCards.forEach(function(blogCard) {
+		blogCard.addEventListener('mousemove', function(e) {
+			var x = e.offsetX;
+			var y = e.offsetY;
+			console.log(x, y);
+			var rotateY = 4 / -30 * x + 35;
+			var rotateX = 1 / -5 * y + 35;
+			blogCard.style.transform = `perspective(750px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+		});
+
+		blogCard.addEventListener('mouseout', function() {
+			blogCard.style.transform = 'perspective(750px) rotateY(0deg) rotateX(0deg)';
+		});
+	});
 
 });
