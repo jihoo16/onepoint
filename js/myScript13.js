@@ -430,8 +430,8 @@ $(function(){
 
 		palQ.click(function () {
 			palqnawrap.eq(i+1).slideToggle();
-			palQimgboximg.eq(currentIndex + 1).toggle();
-			palQimgboximg.eq(currentIndex).toggle();
+			palQimgboximg.eq(i + 1).toggle();
+			palQimgboximg.eq(i).toggle();
 		});
 
 		palclose.eq(i).click(function () {
