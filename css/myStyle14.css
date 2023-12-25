@@ -97,7 +97,7 @@ header{
 	display: flex;
 	justify-content: center;
 	position: relative;
-/*	overflow: hidden;*/
+	overflow: hidden;
 }
 #logo{
 	padding: 20px;
@@ -904,7 +904,7 @@ margin: 10px auto;
 span.toggleon{
 	position: absolute;
 	right: 0;
-	top: -20px;
+/*	top: -20px;*/
 	color: #087eff;
 	visibility: hidden;
 	animation: on 1s forwards;
@@ -920,7 +920,7 @@ span.toggleon{
 span.toggleoff{
 	position: absolute;
 	right: 0;
-	top: -20px;
+/*	top: -20px;*/
 	animation: off 1s forwards;
 	font-size: 6em;
 	cursor: auto ;
@@ -1742,11 +1742,11 @@ footer{
 		height: 50%;
 	}
 	span.toggleon{
-		top: -20px;
+/*		top: -20px;*/
 		font-size: 5em;
 	}
 	span.toggleoff{
-		top: -20px;
+/*		top: -20px;*/
 		font-size: 5em;
 	}
 	.sevenwrap{
