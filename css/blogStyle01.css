@@ -288,6 +288,7 @@ footer{
 /*****************************작은 모니터 크기*************/
 @media screen and (min-width:768px) and (max-width:959px){
 	/*헤더 테블릿 미디어 커리 -----------------------------------------*/
+	
 	.headerwrap img{
 		width: 138px;
 	}
@@ -339,6 +340,9 @@ footer{
 /*****************************스마트폰 크기*************/
 @media screen and (max-width:767px){
 	/*헤더 스마트폰 미디어 커리 -----------------------------------------*/
+	header{
+		margin-bottom: 50px;
+	}
 	.headerwrap img{
 		width: 138px;
 	}
