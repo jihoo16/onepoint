@@ -107,13 +107,14 @@ header{
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.0);
 }
-#logo  h3 a{
-	font-size: 20px;
+#logo h3 a{
+	font-size: 25px;
+	font-weight: 900;
 }
 #logo a h1{
 	width:211px;
 	position: relative;
-	top: -20px
+	top: -10px
 }
 #logo a h1 img{
 	width:200px;
@@ -125,8 +126,8 @@ header{
 	color: white;
 	text-decoration: none;
 	position: relative;
-	top: 15px;
-	margin-left: 10px;
+	top: 0px;
+	margin-left: 30px;
 }
 #probtn{
 	width: 150px;
@@ -137,7 +138,7 @@ header{
 	font-weight: 700;
 	background-color: rgba(0, 0, 0, 0);
 	position: relative;
-	top: 10px;
+	top: 30px;
 	color: white;
 }
 
@@ -150,7 +151,7 @@ header{
 	border: none;
 	background-color: rgba(0, 0, 0, 0);
 	position: relative;
-	top: 10px;
+	top: 30px;
 	right: 10px;
 }
 #headercenter{
@@ -1060,6 +1061,10 @@ top: 100px;
 .scw{
 	width: 100%;
 }
+.scw:hover{
+	transform: translateY(-30px);
+	transition: all 1s;
+}
 .sevencardwrap a:nth-child(even){
 	margin-top: 170px;
 }
@@ -1151,10 +1156,12 @@ top: 100px;
 	padding: 20px 50px;
 	border-top: 1px solid gray;
 	border-bottom: 1px solid gray;
+
 }
 .palqna{
 	width: 100%;
 	display: flex;
+	
 
 }
 .palQimgbox .rotate{
@@ -1168,6 +1175,9 @@ top: 100px;
 	line-height: 100px;
 	position: relative;
 	cursor: pointer;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 .palQ,.pqlA{
 	width: 95%;
