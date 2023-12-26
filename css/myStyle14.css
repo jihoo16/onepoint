@@ -97,7 +97,7 @@ header{
 	display: flex;
 	justify-content: center;
 	position: relative;
-	overflow: hidden;
+/*	overflow: hidden;*/
 }
 #logo{
 	padding: 20px;
