@@ -334,7 +334,6 @@ header{
 }
 #topPro h2{
 	font-weight: bold;
-	
 	font-size: 42px;
 }
 #topPro p{
@@ -1831,5 +1830,8 @@ footer{
 	}
 	footer{
 		width: 98%;	
+	}
+	#topPro h2{
+		font-size: 32px;
 	}
 }
