@@ -1,0 +1,259 @@
+/*폰트*/
+
+@font-face {
+	font-family: 'Pretendard-Regular';
+	src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+/*초기화*/
+
+*{
+	margin: 0;
+	padding: 0;
+	/*border: 1px solid gray;*/
+	box-sizing: border-box;
+	font-family: 'Pretendard-Regular';
+}
+html,body{
+	background-color: white;
+	color: white;
+	width: 100%;
+	height: 100%;
+/*	overflow-x: hidden;*/
+}
+a{
+	text-decoration: none;
+	color: white;
+}
+h1{
+	font-weight: 900;
+}
+#wrapper{
+	width:100%;
+	position: relative;
+/*	background-color: #0f0f0f;*/
+
+}
+.font24{
+	font-size: 24px;
+}
+.font20{
+	font-size: 20px;
+}
+.font42{
+	font-weight: 900;
+	font-size: 42px;
+}
+.font18{
+	font-size: 18px;
+}
+.font14{
+	font-size:14px;
+}
+.colorw{
+	color: white;
+}
+.colorp{
+	color: #087eff;
+}
+.colorb{
+	color: #0f0f0f;
+}
+.colorg{
+	color: gray;
+}
+.bgb{
+	background-color: #0f0f0f;;
+}
+.bgp{
+	background-color: #087eff;
+}
+.bgg{
+	background-color: #1C212d;
+}
+
+#wrapper{
+	width: 100%;
+}
+/*헤더 css*/
+
+/*네비게이션 바 css--------------------------------------------------------*/
+.headerwrap{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	display: flex;
+	font-weight: 900;
+	background-color: white;
+	position: fixed;
+}
+.imgbox{
+	width: 100%;
+	padding: 0 30px;
+}
+.headerwrap .nav{
+	width: 40%;
+
+}
+.headerwrap .nav a,.headerwrap .nav p{
+	cursor: pointer;
+	margin-right: 25px;
+	padding: 0 0px;
+}
+
+.headerwrap .nav a:hover,.headerwrap .nav p:hover{
+	color: #BBBBBB;
+}
+
+.headerwrap img{
+	width: 100px;
+}
+.open{
+	color: black;
+	padding: 10px;
+	font-style: 40px;
+}
+.closeOpen, .nav a{
+	background-color: white;
+	color: black;
+}
+.closeOpen{
+	width: 30%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 1000px;
+	z-index: 99;
+}
+.close{
+	width: 100%;
+	text-align: right;
+	padding: 20px;
+}
+.nav{
+	flex-direction: column;
+}
+.nav a{
+	margin-bottom: 20px;
+	padding-left: 20px;
+}
+.textbox{
+	display: flex;
+	width: 60%;
+	justify-content: flex-end;
+}
+.textbox a{
+	color: black;
+	margin-right: 30px;
+}
+
+
+
+/*#first 섹션--------------------------------------------------------*/
+#first{
+	padding-top: 200px;
+	width: 100%;
+	background-color: black;
+	height: 1250px;
+
+}
+.firsttextbox{
+	width: 60%;
+	margin: 0 auto;
+	text-align: center;
+}
+.firsttextbox h1{
+	width: 100%;
+	margin-bottom: 50px;
+}
+.firsttextbox p{
+	width: 100%;
+}
+.videobox{
+	width: 100%;
+	margin-bottom: 100px;
+}
+iframe{
+	width: 90%;
+	height: 600px;
+	display: block;
+	margin: 0 auto;
+}
+.buttonwrap{
+	width: 100%;
+	position: relative;
+	padding-right: 30px;
+	display: flex;
+	justify-content: flex-end
+}
+.button{
+	width: 130px;
+	height: 50px;
+	border: 1px solid white;
+	background-color: white;
+	position: relative;
+	border-radius: 10px;
+	text-align: center;
+	line-height: 50px;
+}
+.button a{
+	color: black;
+	font-size: 14px;
+}
+/***************************************************/
+/******************미디어 커리***********************/
+/***************************************************/
+
+/*****************************큰모니터 크기*************/
+@media screen and (min-width:960px){
+/*헤더 데스크탑 미디어 커리 -----------------------------------------*/
+.open{
+	display: none;
+}
+.textbox{
+	display: flex;
+	width: 60%;
+	justify-content: flex-end;
+
+}
+}
+/*****************************작은 모니터 크기*************/
+@media screen and (min-width:768px) and (max-width:959px){
+	/*헤더 테블릿 미디어 커리 -----------------------------------------*/
+	.textbox{
+		display: none;
+	}
+	.open{
+		display: block;
+	}
+
+}
+/*****************************스마트폰 크기*************/
+@media screen and (max-width:767px){
+	/*헤더 스마트폰 미디어 커리 -----------------------------------------*/
+	.textbox{
+		display: none;
+	}
+	.open{
+		display: block;
+	}
+	iframe{
+		width: 100%;
+		height: 300px;
+		display: block;
+		margin: 0 auto;
+
+	}
+	#first{
+		height: 950px;
+	}
+	.closeOpen{
+		width: 50%;
+		position: fixed;
+		top: 0;
+		right: 0;
+		height: 1000px;
+	}
+}

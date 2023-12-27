@@ -429,4 +429,7 @@ footer{
 	.footerwrap{
 		padding-bottom: 0;
 	}
+	#lastdiv{
+		padding: 0;
+	}
 }
