@@ -143,6 +143,7 @@ h1{
 }
 .nav{
 	flex-direction: column;
+	position: relative;
 }
 .nav a{
 	margin-bottom: 20px;

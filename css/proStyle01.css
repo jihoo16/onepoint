@@ -83,13 +83,13 @@ header{
 }
 
 #headerdiv{
-	width: 98%;
+	width: 100%;
 	height: 100px;
 	display: flex;
 	justify-content: space-between;
 	position: relative;
 	z-index: 999;
-	background-color: rgba(0, 0, 0, 0.0);
+	background-color: white;
 	overflow: hidden;
 }
 .flex{
@@ -108,6 +108,7 @@ header{
 	background-color: rgba(0, 0, 0, 0.0);
 }
 #logo h3 a{
+	color: #087eff;
 	font-size: 24px;
 	font-weight: 900;
 }
@@ -145,13 +146,13 @@ header{
 	background-color: rgba(0, 0, 0, 0);
 	position: relative;
 	top: 30px;
-	color: white;
+	color: black;
 }
 
 #loginbtn{
 	width: 100px;
 	height: 50px;
-	color: white;
+	color: black;
 	font-size: 16px;
 	font-weight: 700;
 	border: none;
@@ -176,14 +177,15 @@ header{
 	margin-bottom: 30px;
 }
 .buttomblue{
-	width: 200px;
-	height: 60px;
+	width: 150px;
+	height: 40px;
 	border-radius: 50px;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 700;
 	background-color: #087eff;
 	color: white;
 	border: none;
+	margin-top: 10px;
 }
 #headercenter a{
 	font-style: normal;
@@ -289,6 +291,7 @@ header{
 	position: absolute;
 	top: -100px;
 	padding: 30px;
+	background-color: white;
 }
 
 #hambermenu h3{
@@ -301,7 +304,7 @@ header{
 }
 #hambermenu a {
 	width: 100%;
-	color: white;
+	color: black;
 	display: block;
 	margin: 20px 10px;
 	text-align: right;
@@ -319,10 +322,10 @@ header{
 	border: 1px solid #fff;
 	font-size: 16px;
 	font-weight: 700;
-	background-color: #070707;
+	background-color: rgba(0, 0, 0, 0.0);
 	position: relative;
 	top: 10px;
-	color: white;
+	color: balck;
 }
 .close {
 	width: 100px;
@@ -462,16 +465,16 @@ animation: movezero2 30s infinite linear;
 	}
 }
 @keyframes movezero2{
-	0%{ transform: translateX(-10%);
+	0%{ transform: translateX(-5%);
 	}
 	100%{
-		transform: translateX(-110%);
+		transform: translateX(-105%);
 	}
 }
 #imgani .imganiimg img, #imgani .imganiimg2 img,#imgani .imganiimg3 img,#imgani .imganiimg4 img{
-	width: 170px;
+	width: 240px;
 	height: 170px;
-	margin: 70px;
+	margin:  20px;
 	display: inline-block;
 }
 .card-body{
@@ -1378,6 +1381,7 @@ footer{
 		width: 600px;
 		margin: 0 auto;
 	}
+
 	#imganitext span:nth-of-type(3){
 		display: inline-block;
 	}
@@ -1519,7 +1523,7 @@ footer{
 		position: fixed;
 		left: 0;
 		z-index: 9999;
-		background: #070707;
+		background: white;
 	}
 	#hambermenu a h1 img{
 		width: 170px;
