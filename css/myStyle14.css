@@ -333,8 +333,13 @@ header{
 	text-align: center;
 }
 #topPro h2{
+	width: 100%;
 	font-weight: bold;
 	font-size: 42px;
+	overflow: hidden;
+}
+#topPro h2 span{
+	width: 100%;
 }
 #topPro p{
 	color: gray;
@@ -342,7 +347,7 @@ header{
 	margin-bottom: 100px;
 }
 #topPro h3{
-	width: 434px;
+	width: 100%;
 	color: gray;
 	font-size: 30px;
 	font-weight: bold;
@@ -350,7 +355,7 @@ header{
 	cursor: pointer;
 }
 #topPro h3 span.marketing{
-	margin: 0 2% 0 20%;
+	margin: 0 2% 0 10%;
 }
 .white{
 	color: white;
@@ -1352,11 +1357,12 @@ footer{
 		right: 5px;
 	}
 	#topPro h2{
-		width: 450px;
+		width: 90%;
 		margin: 0 auto;
 	}
 	#topPro h2 span:nth-of-type(2){
 		display: block;
+		width: 90%;
 	}
 	#imganitext{
 		width: 600px;
@@ -1595,7 +1601,7 @@ footer{
 		display: block ; 
 	}
 	#topPro h2{
-		width: 450px;
+		width: 90%;
 		margin: 0 auto;
 	}
 	#topPro h2 span:nth-of-type(2){
