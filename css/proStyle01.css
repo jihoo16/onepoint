@@ -186,6 +186,7 @@ header{
 	color: white;
 	border: none;
 	margin-top: 10px;
+	line-height: 40px;
 }
 #headercenter a{
 	font-style: normal;
@@ -810,7 +811,7 @@ background-color: red;
 .fivesecond{
 	width: 35%;
 	float: left;
-	font-size: 40px;
+	font-size: 30px;
 	font-weight: bold;
 /*	border: 1px solid blue;*/
 margin-right: 5%;
@@ -1401,9 +1402,9 @@ footer{
 		left: 0;
 		animation: 	whitebox 16s infinite;
 	}
-	p.hide{
+	/*p.hide{
 		display: none;
-	}
+	}*/
 	.fivesecond{
 		width: 100%;
 		font-size: 3vw;
@@ -1661,9 +1662,7 @@ footer{
 	.mdhardaniwrap{
 		display: flex;
 	}
-	.bar1,.hide{
-		display: none;
-	}
+
 	.bar2{
 		display: block;
 		width: 100%;
@@ -1672,9 +1671,7 @@ footer{
 		animation: 	whitebox 16s infinite;
 	}	
 
-	#hardleft{
-		height: 200px;
-	}
+	
 	#forth img{
 		width: 430px;
 		height: 304px;

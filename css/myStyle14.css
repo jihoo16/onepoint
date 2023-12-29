@@ -632,11 +632,10 @@ background-color: red;
 .bar1{
 	width:30%;
 	background-color: #070000;
-	
 	position: relative;
 	top: -250px;
-	left:50%;
-
+	right:-65%;
+	margin-right: 100px;
 }
 .progress-bar{
 	width: 0px;
@@ -1397,9 +1396,9 @@ footer{
 		left: 0;
 		animation: 	whitebox 16s infinite;
 	}
-	p.hide{
+	/*p.hide{
 		display: none;
-	}
+	}*/
 	.fivesecond{
 		width: 100%;
 		font-size: 3vw;
@@ -1657,7 +1656,7 @@ footer{
 	.mdhardaniwrap{
 		display: flex;
 	}
-	.bar1,.hide{
+	.bar1{
 		display: none;
 	}
 	.bar2{
@@ -1669,7 +1668,7 @@ footer{
 	}	
 
 	#hardleft{
-		height: 200px;
+		height: 100%;
 	}
 	#forth img{
 		width: 430px;
