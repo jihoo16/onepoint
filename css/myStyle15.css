@@ -110,6 +110,7 @@ header{
 #logo h3 a{
 	font-size: 24px;
 	font-weight: 900;
+	position: relative;
 }
 #logo a h1{
 	width:211px;
@@ -120,13 +121,13 @@ header{
 	width:200px;
 }
 
-
 #buttondiv a{
 	color: white;
 	text-decoration: none;
 	position: relative;
 	top: 0px;
 	margin-left: 10px;
+
 }
 #logo a{
 	color: white;
@@ -135,17 +136,17 @@ header{
 	top: 0px;
 	margin-left: 10px;
 }
-#probtn{
-	width: 150px;
+.probtn{
 	height: 50px;
-	border-radius: 50px;
-	border: 1px solid #fff;
 	font-size: 16px;
 	font-weight: 700;
+	border: none;
 	background-color: rgba(0, 0, 0, 0);
 	position: relative;
 	top: 30px;
 	color: white;
+	text-align: right;
+	margin-left: 10px;
 }
 
 #loginbtn{
@@ -540,7 +541,7 @@ position: relative;
 }
 
 #hardani, #hardani2{
-	width:56%;
+	width:43%;
 	display: flex;
 	position: relative;
 	align-items: start;
@@ -552,12 +553,13 @@ position: relative;
 	--f-carousel-spacing: 10px;
 	--f-carousel-slide-width: 60%;
 	width: 100%;
-	max-width: 100%;
+	
 }
 
 #myCarousel .f-carousel__slide {
 	padding: 10px;
 	background: rgba(0, 0, 0, 0.0);
+
 }
 .f-carousel__dots li button{
 	color: white;

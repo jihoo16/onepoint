@@ -139,6 +139,12 @@ small{
 	margin: 20px;
 	border-radius: 50px;
 }
+.close{
+	width: 30px;
+	position: fixed;
+	top: 10px;
+	right: 10px;
+}
 /*헤더 css*/
 
 /*네비게이션 바 css--------------------------------------------------------*/
@@ -159,7 +165,7 @@ small{
 	}
 	.right{
 		width: 100%;
-		padding: 40px;
+		padding: 80px 40px;
 	}
 
 }
@@ -170,7 +176,7 @@ small{
 	}
 	.right{
 		width: 100%;
-		padding: 20px;
+		padding: 80px 20px;
 	}
 	.formwrap{
 		width: 100%;

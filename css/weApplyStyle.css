@@ -27,6 +27,7 @@ a{
 	text-decoration: none;
 	color: white;
 }
+
 h1{
 	font-weight: 900;
 }
@@ -163,7 +164,11 @@ h1{
 	margin-top: 40;
 	margin-right: 30px;
 }
-
+.textbox a:hover{
+	text-decoration: none;
+	scale: 1.2;
+	transition: all 1s;
+}
 
 /*#first 섹션--------------------------------------------------------*/
 #first{
@@ -174,13 +179,57 @@ h1{
 }
 .dropdown input{
 	width: 90%;
-	
-}
 
+	text-align: left;	
+}
+.dropdown{
+	align-items: center;
+	border-radius: 10px;
+	height: 48px;
+}
+.tagbtn{
+	font-size: 20px;
+}
+.btnin{
+	font-size: 16px;
+}
+.tgbtn{
+	width: 100%;	
+}
+.tgbtn:hover{
+	background-color: lightgray;
+}
+.apply{
+	font-size: 20px;
+}
+.bbtn{
+	width: 90%;
+	height: 100px;
+	border-radius: 50px;
+	font-size: 20px;
+	font-weight: bold;
+}
+.bbtnspan{
+	margin: 20px 1%;
+	height: 60px;
+	line-height: 60px;
+	font-weight: 900;
+}
+.smsize span{
+	margin: 20px;
+	text-align: center;
+	padding-right: 10%;
+}
+.chatbtn{
+	height: 48px;
+	border-radius: 100px;
+}
+.hiderow button,.smsize button{
+	cursor: default !important	;
+}
 /*#footer 섹션--------------------------------------------------------*/
 footer{
 	width: 100%;
-	
 }
 .footerwrap{
 	width: 90%;
@@ -208,8 +257,9 @@ footer{
 	width: 60%;
 	justify-content: flex-end;
 }
-
-
+.smsize{
+	display: none;
+}
 }
 /*****************************작은 모니터 크기*************/
 @media screen and (min-width:768px) and (max-width:959px){
@@ -220,7 +270,12 @@ footer{
 	.open{
 		display: block;
 	}
-
+	.hiderow{
+		display: none;
+	}
+	.smsize{
+		display: block;
+	}
 }
 /*****************************스마트폰 크기*************/
 @media screen and (max-width:767px){
@@ -243,5 +298,11 @@ footer{
 	
 	footer{
 		padding: 80px 0px 0;
+	}
+	.hiderow{
+		display: none;
+	}
+	.smsize{
+		display: block;
 	}
 }

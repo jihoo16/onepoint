@@ -23,7 +23,7 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 	/>
 
-	<script src="js/weScript01.js"></script>
+	<script src="js/weApplyScript01.js"></script>
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
@@ -35,14 +35,14 @@
 			<div class="headerwrap">
 				<div class="imgbox">
 					<a href="we.html">
-						<img src="img/right.webp" alt="">
+						<img src="img/h-logo_bl.png" alt="">
 					</a>
 				</div>
 
 				<div class="textbox">
-					<a href="" class="active">Company</a>
+					<a href="" >Company</a>
 					<a href="">Culutre</a>
-					<a href="">Apply</a>
+					<a href="" class="active">Apply</a>
 					<a href="">FAQ</a>
 				</div>
 				<div class="hamburger">
@@ -68,47 +68,161 @@
 		</header>
 		<div class="padding70"></div>
 		<div id="first" class="container">
-			<h2>유니콘이 될 롸잇에 합류 하는 과정</h2>
+			<h2 class="font-weight-bold">유니콘이 될 롸잇에 합류 하는 과정</h2>
 			<div class="row">
-				<div class="col d-flex">
-					<div class="dropdown m-3">
-						<button class="btn btn-light border btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+				<div class="col-12 d-flex">
+					<div class="col-12 col-lg-10  d-flex flex-column flex-md-row">	
+					<div class="dropdown m-3 d-none d-md-block">
+						<button class="btn btn-light border btn-lg dropdown-toggle alljob" type="button" data-toggle="dropdown" aria-expanded="false">
 							전체 직군
 						</button>
 						<div class="dropdown-menu p-1 my-2">
-							<a class="dropdown-item" href="#">전체직군</a>
-							<a class="dropdown-item" href="#">Backend Developer</a>
-							<a class="dropdown-item" href="#">Marketer</a>
+							<a class="dropdown-item allj" href="#">전체직군</a>
+							<a class="dropdown-item Backend" href="#">Backend Developer</a>
+							<a class="dropdown-item Marketer" href="#">Marketer</a>
 						</div>
 					</div>
-					<div class="dropdown m-3">
-						<button class="btn btn-light border btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+					<div class="dropdown m-3 d-none d-md-block">
+						<button class="btn btn-light border btn-lg allposition  dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
 							전체 소속
 						</button>
 						<div class="dropdown-menu p-1 my-2">
-							<a class="dropdown-item" href="#">전체직군</a>
-							<a class="dropdown-item" href="#">Backend Developer</a>
-							<a class="dropdown-item" href="#">Marketer</a>
+							<a class="dropdown-item allp" href="#">전체소속</a>
+							<a class="dropdown-item business" href="#">Business</a>
+							<a class="dropdown-item product" href="#">프로덕트</a>
 						</div>
 					</div>
-					<div class="dropdown m-3">
-						<button class="btn btn-light border btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+					<div class="dropdown m-3 d-none d-md-block">
+						<button class="btn btn-light border btn-lg dropdown-toggle allapply" type="button" data-toggle="dropdown" aria-expanded="false">
 							전체 고용 형태
 						</button>
 						<div class="dropdown-menu p-1 my-2">
-							<a class="dropdown-item" href="#">전체직군</a>
-							<a class="dropdown-item" href="#">Backend Developer</a>
-							<a class="dropdown-item" href="#">Marketer</a>
+							<a class="dropdown-item alla" href="#">전체 고용 형태</a>
+							<a class="dropdown-item fulltime" href="#">정규직</a>
+							<a class="dropdown-item contrat" href="#">계약직</a>
+							<a class="dropdown-item intern" href="#">인턴</a>
 						</div>
 					</div>
-					<div class="dropdown m-3">
+					<div class="dropdown m-3 border d-flex bg-light">
 						
-							<input class="btn bg-light" type="text">
+						<input class="btn bg-light" type="text" placeholder="검색">
+						<a href="" class="colorb"><span class="material-symbols-outlined">
+							search
+							</a>
+						</span>
 						
 						
+					</div>
+					</div>
+					<div class="col-2">	
+					<div class="dropdown m-3 d-none d-lg-flex justify-content-end ">
+						<p class="my-0">
+							<button class="btn tagbtn btn-light" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+								태그
+								<span class="material-symbols-outlined btnin">
+									expand_more
+								</span>
+							</button>
+						</p>
+
+					</div>
+					</div>
+				</div>
+				<div class="collapse" id="collapseExample">
+					<div class="card d-flex flex-row border-0">
+						<a class="btn btn-dark m-2 all" >
+							전체
+						</a>
+						<a class="btn btn-light m-2 Backend back">
+							개발
+						</a>
 					</div>
 				</div>
 			</div>
+			<div class="row my-5">
+				<div class="col">
+					<button class="btn tgbtn growth">
+						<span class="d-flex flex-column p-3">
+							<span class="col-12 text-left font-weight-bold d-flex justify-content-between"><span class="apply">
+								[RIGHT] 그로스 마케터(Growth Marketer)
+							</span>
+							<span class="">상시채용</span></span>
+							<span class="col-12 text-left">Business | Marketer | 마케팅 | 경력 2 ~ 7년 | 정규직 · 계약직 | 롸잇 본사 | 상시 채용</span>
+						</span>
+					</button>
+					<button class="btn tgbtn full">
+						<span class="d-flex flex-column p-3">
+							<span class="col-12 text-left font-weight-bold d-flex justify-content-between"><span class="apply">
+								[RIGHT] 풀스택 개발자 (Full-stack Developer)
+							</span>
+							<span class="">상시채용</span></span>
+							<span class="col-12 text-left">프로덕트 | Backend Back-end 개발 | 경력 1 ~ 7년 | 계약직 · 인턴 | 롸잇 본사 | 상시 채용</span>
+						</span>
+					</button>
+				</div>
+			</div>
+			<hr>
+			<h2 class="font-weight-bold my-5">롸잇에 합류하는 과정</h2>
+			<div class="row hiderow">	
+				<div class="col-3 d-flex justify-content-between flex-row ">
+					<button class="btn btn-dark bbtn">서류 지원</button>
+					<span class="material-symbols-outlined bbtnspan">
+						chevron_right
+					</span>
+				</div>
+				<div class="col-3 d-flex justify-content-between flex-row ">
+					<button class="btn btn-dark bbtn">서류 지원</button>
+					<span class="material-symbols-outlined bbtnspan">
+						chevron_right
+					</span>
+				</div>
+				<div class="col-3 d-flex justify-content-between flex-row ">
+					<button class="btn btn-dark bbtn">서류 지원</button>
+					<span class="material-symbols-outlined bbtnspan">
+						chevron_right
+					</span>
+				</div>
+				<div class="col-3 d-flex justify-content-between flex-row ">
+					<button class="btn btn-dark bbtn">서류 지원</button>
+				</div>
+				<p class="my-5">* 지원서 내용 중 허위 사실이 있을 경우 합격이 취소될 수 있습니다.</p>
+			</div>
+
+			<div class="row smsize">	
+				<div class="col-12 col-lg-3 d-flex justify-content-between flex-column">
+					<button class="btn btn-dark bbtn">서류 지원</button>
+					<span class="material-symbols-outlined">
+						keyboard_arrow_down
+					</span>
+				</div>
+				<div class="col-12 col-lg-3 d-flex justify-content-between flex-column">
+					<button class="btn btn-dark bbtn">서류 지원</button>
+					<span class="material-symbols-outlined">
+						keyboard_arrow_down
+					</span>
+				</div>
+				<div class="col-12 col-lg-3 d-flex justify-content-between  flex-column">
+					<button class="btn btn-dark bbtn">서류 지원</button>
+					<span class="material-symbols-outlined">
+						keyboard_arrow_down
+					</span>
+				</div>
+				<div class="col-12 col-lg-3 d-flex justify-content-between  flex-column">
+					<button class="btn btn-dark bbtn">서류 지원</button>
+				</div>
+
+				<p class="my-5">* 지원서 내용 중 허위 사실이 있을 경우 합격이 취소될 수 있습니다.</p>
+			</div>
+			<hr>
+			<div class="row my-5 pt-5">
+				<div class="col text-center">
+					<p>지원이 고민되신다면</p>
+					<p>이곳에서 어떤 일을 하는지, 비전은 어떤지 미리 알아보시길 제안드립니다. </p>
+					<p>아래 버튼을 눌러 커피챗 일정을 예약해주세요. </p>
+					<button class="btn btn-dark mb-5 chatbtn">롸잇과 커피챗 하기</button>
+				</div>
+			</div>
+			<hr>	
 		</div>
 		<footer>
 			<div class="footerwrap">
