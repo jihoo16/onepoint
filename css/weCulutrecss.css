@@ -6,6 +6,12 @@
 	font-weight: 400;
 	font-style: normal;
 }
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /*초기화*/
 
@@ -14,14 +20,13 @@
 	padding: 0;
 	/*border: 1px solid gray;*/
 	box-sizing: border-box;
-	font-family: 'Pretendard-Regular';
+	font-family: 'NanumSquareNeo-Variable';
 }
 html,body{
 	background-color: white;
 	color: black;
 	width: 100%;
 	height: 100%;
-/*	overflow-x: hidden;*/
 }
 a{
 	text-decoration: none;
@@ -33,8 +38,10 @@ h1{
 #wrapper{
 	width:100%;
 	position: relative;
-/*	background-color: #0f0f0f;*/
 
+}
+.fwb{
+	font-weight: bold;
 }
 .font24{
 	font-size: 24px;
@@ -167,216 +174,98 @@ h1{
 }
 
 
-/*#first 섹션--------------------------------------------------------*/
-#first{
-	padding-top: 200px;
-	width: 100%;
-	background-color: black;
-	height: 1250px;
 
-}
-.firsttextbox{
-	width: 60%;
-	margin: 0 auto;
-	text-align: center;
-}
-.firsttextbox h1{
+/*#first 섹션--------------------------------------------------------*/
+
+#first{
 	width: 100%;
-	margin-bottom: 50px;
+	padding-top: 70px;
 }
-.firsttextbox p{
-	width: 100%;
+.firstwrap{
+	width: 80%;
+	margin: 100px auto;
+	display: flex;	
 }
-.videobox{
-	width: 100%;
-	margin-bottom: 100px;
+.firstin1{
+	width: 50%;
 }
-iframe{
-	width: 90%;
-	height: 600px;
-	display: block;
-	margin: 0 auto;
+.firstin1 h1{
+	font-weight: 900;
+	font-size: 48px;
 }
-.buttonwrap{
-	width: 100%;
-	position: relative;
-	padding-right: 30px;
-	display: flex;
-	justify-content: flex-end
+.fistin2{
+	width: 50%;
 }
-.button{
-	width: 130px;
-	height: 50px;
-	border: 1px solid white;
-	background-color: white;
-	position: relative;
-	border-radius: 10px;
-	text-align: center;
-	line-height: 50px;
+.hr{
+	width: 200%;	
+	border: 1px solid black;
 }
-.button a{
-	color: black;
-	font-size: 14px;
+.firstin2text span{
+	font-size: 34px;
+	font-weight: bold;
 }
+.firstin2text p{
+	margin-bottom: 0;
+}
+
 /*#second 섹션--------------------------------------------------------*/
 #second{
 	width: 100%;
-}
-.seconddivwrap{
-	width: 90%;
-	margin: 0 auto;
-	padding-top: 70px;
-}
-.seconddiv{
-	width: 60%;
-	max-width: 720px;
-	margin-bottom: 100px;
-}
-.seconddiv h3{
-	font-weight: 900;
-}
-.seconddivindiv{
-	width: 100%;
-	margin: 30px 0;
-}
-.seconddivwrap:nth-of-type(2){
-	display: flex;
-	justify-content: flex-end;
 	margin-bottom: 200px;
 }
-.seconddivwrap:nth-of-type(2) h3{
-	text-align: right;
-}
-/*#year 섹션--------------------------------------------------------*/
-#year{
-	width: 100%;
-	margin-bottom: 200px;
-}
-.yearwrap{
-	width: 95%;
-	display: flex;
+.secondwrap{
+	width: 90%;	
 	margin: 0 auto;
-}
-hr{
-	background-color: black;
-    height:2px;
-    border:0;
-}
-.yeardiv{
-	padding: 10px;
-	width: 50%;
-}
-.yeardiv h2{
-	font-weight: 900;
-}
-.content{
-	display: flex;
-	margin-bottom: 10px;
-}
-.content p{
-	color: gray;
-	margin-right: 10px;
-	font-weight: 900;
-}
-/*#wecard 섹션--------------------------------------------------------*/
-#wecard{
-	width: 100%;
-}
-.wecarddiv{
-	width: 95%;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-}
-.wecarddiv h2{
-	font-weight: 900;
-	margin-bottom: 100px;
-}
-.wecarddiv h2:nth-of-type(2){
-	text-align: right;
-}
-.wecardwrap{
-	display: flex;
-	justify-content: space-around;
-	margin-bottom: 200px;
-	flex-wrap: wrap;
-}
-.wecard{
-	padding: 10px;
-	width: 33%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-.wecardwrap:nth-of-type(1) span{
 	text-align: center;
-	font-weight: 900;
 }
-.wecard img{
- width: 100%;
- border-radius: 10px;
+.secondwrap p{
+	margin: 30px;
+}
+.secondinbox{
+	width: 100%;
+	display: flex;	
+}
+.blackbox{
+	width: 33%;
+	background-color: black;
+	color: white;
+	border-radius: 10px;
+	padding: 60px 20px;
+	margin: 10px;
+	text-align: center;
+/*	max-width: 400px;*/
+}
+.blackbox h3{
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.blackbox p{
+	margin: 0;
+	font-size: 12px;
 
 }
-.wecard p{
-	color: gray;
-	font-weight: 900;
-	margin: 30px 0 20px;
-	font-size: 18px;
+/*#three 섹션--------------------------------------------------------*/
+#three{
+	width: 100%;	
 }
-.wecard strong{
- font-size: 20px;
-}
-.wecard span{
-	
-	margin: 30px 0 40px;
-	font-size: 15px;
-}
-.wecard a{
-	display: block;
-	width: 100%;
-}
-.wecard button{
-	width: 100%;
-	height: 40px;
-	border: none;
-	background-color: #087eff;
-	color: white;
-	border-radius: 10px;
-}
-.wecard h3{
-	font-weight: 900;
-	margin-top: 30px;
-	font-size: 24px;
-}
-/*#last 섹션--------------------------------------------------------*/
-#last{
-	width: 100%;
-	background-color: black;
-	padding: 50px;
-}
-.lastwrap{
+.threewrap{
+	width: 90%;	
+	margin: 0 auto;
 	text-align: center;
-	width: 50%;
-	color: white;
-	margin: 50px auto;
-	
 }
-.lastwrap h2{
-	margin-bottom: 50px;
-	font-weight: 900;
+.threeinbox{
+	width: 100%;
+	display: flex;
 }
-.lastwrap button{
-	width: 190px;
-	height: 40px;
-	border: none;
-	background-color: #087eff;
-	color: white;
-	border-radius: 10px;
-	font-weight: 900;
+.tibCard{
+	width: 33%;	
 }
+
+
 /*#footer 섹션--------------------------------------------------------*/
 footer{
 	width: 100%;
+
 	
 }
 .footerwrap{
@@ -387,24 +276,7 @@ footer{
 	color: gray;
 	margin: 0 auto;
 }
-.up{
-	background-color: gray;
-}
-.up span{
-	width: 60px;
-	height: 60px;
-	text-align: center;
-	line-height: 60px;
-	position: fixed;
-	font-size: 40px;
-	bottom: 20px;
-	right: 20px;
-	background-color: gray;
-	border-radius: 50%;
-	color: white;
-	cursor: pointer;
-	display: none;
-}
+
 /***************************************************/
 /******************미디어 커리***********************/
 /***************************************************/
@@ -420,9 +292,7 @@ footer{
 	width: 60%;
 	justify-content: flex-end;
 }
-.seconddivwrap,.wecarddiv,.yearwrap,.footerwrap{
-	width: 70%;
-}
+
 
 }
 /*****************************작은 모니터 크기*************/
@@ -433,6 +303,12 @@ footer{
 	}
 	.open{
 		display: block;
+	}
+	.firstwrap{
+		display: block;
+	}
+	.firstin1,.firstin2,.hr{
+		width: 100%;
 	}
 
 }
@@ -445,16 +321,8 @@ footer{
 	.open{
 		display: block;
 	}
-	iframe{
-		width: 100%;
-		height: 300px;
-		display: block;
-		margin: 0 auto;
-
-	}
-	#first{
-		height: 950px;
-	}
+	
+	
 	.closeOpen{
 		width: 50%;
 		position: fixed;
@@ -462,22 +330,14 @@ footer{
 		right: 0;
 		height: 1000px;
 	}
-	.seconddiv{
-		width: 100%;
-	}
-	.yearwrap{
-		display: block;
-	}
-	.yeardiv{
-		width: 100%;
-	}
-	.wecard{
-		width: 100% !important;
-	}
-	.lastwrap{
-		width: 95%;
-	}
+	
 	footer{
 		padding: 80px 0px 0;
+	}
+	.firstwrap,.secondinbox{
+		display: block;
+	}
+	.firstin1,.firstin2,.hr,.blackbox{
+		width: 100%;
 	}
 }
