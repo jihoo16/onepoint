@@ -132,7 +132,7 @@ header{
 #buttondiv a button:hover{
 	scale: 1.2;
 	transition: all	1s;
-	animation: ll 1s infinite;
+	animation: ll 1s ;
 }
 @keyframes ll{
 	0%,100%{
