@@ -85,7 +85,15 @@ h1{
 
 }
 /*헤더 css*/
-
+.hidewrap{
+	background-color: black;
+	opacity: 0.5;
+	position: fixed;
+	width: 1000px;
+	height: 1000px;
+	z-index: 9;
+	top: 0;
+}
 /*네비게이션 바 css--------------------------------------------------------*/
 .headerwrap{
 	width: 100%;
@@ -123,6 +131,9 @@ h1{
 	padding: 10px;
 	font-size: 30px;
 	line-height: 50px;
+	cursor: pointer;
+	position: relative;
+	z-index: 999;
 }
 .closeOpen, .nav a{
 	background-color: white;
@@ -141,10 +152,12 @@ h1{
 	font-size: 30px;
 	text-align: right;
 	padding: 20px;
+	cursor: pointer;
 }
 .nav{
 	flex-direction: column;
 	position: relative;
+	padding: 30px 20px;
 }
 .nav a{
 	margin-bottom: 20px;

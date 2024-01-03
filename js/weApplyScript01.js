@@ -3,11 +3,14 @@ $(function(){
 	let open = $(".open");
 	let close = $(".close");
 	let	closeOpen = $(".closeOpen");
-
+	let hidewrap =$(".hidewrap");
+	
+	hidewrap.hide();
 	
 	closeOpen.hide();
 	open.click(function(){
-		closeOpen.slideDown(1000);
+		closeOpen.show(1000);
+		hidewrap.show(1000);
 		$("body").addClass('hidden');
 		close.show();
 		open.hide();
@@ -17,6 +20,7 @@ $(function(){
 		closeOpen.hide();
 		close.hide();
 		$("body").removeClass('hidden');
+		hidewrap.hide();
 	})
 	AOS.init();
 	var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();

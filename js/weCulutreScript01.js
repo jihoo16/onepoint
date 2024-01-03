@@ -4,12 +4,11 @@ $(function(){
 	let close = $(".close");
 	let	closeOpen = $(".closeOpen");
 	let hidewrap =$(".hidewrap");
-	hidewrap.hide();
 	
+	hidewrap.hide();
 	closeOpen.hide();
 	open.click(function(){
 		closeOpen.slideDown(1000);
-		$("body").addClass('hidden');
 		hidewrap.slideDown(1000);
 		close.show();
 		open.hide();
@@ -18,7 +17,6 @@ $(function(){
 		open.show();
 		closeOpen.hide();
 		close.hide();
-		$("body").removeClass('hidden');
 		hidewrap.hide();
 	})
 	AOS.init();

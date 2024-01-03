@@ -129,6 +129,19 @@ header{
 	margin-left: 10px;
 
 }
+#buttondiv a button:hover{
+	scale: 1.2;
+	transition: all	1s;
+	animation: ll 1s infinite;
+}
+@keyframes ll{
+	0%,100%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 1;
+	}
+}
 #logo a{
 	color: white;
 	text-decoration: none;

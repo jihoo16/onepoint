@@ -83,7 +83,15 @@ h1{
 	width: 100%;
 }
 /*헤더 css*/
-
+.hidewrap{
+	background-color: black;
+	opacity: 0.5;
+	position: fixed;
+	width: 1000px;
+	height: 1000px;
+	z-index: 9;
+	top: 0;
+}
 /*네비게이션 바 css--------------------------------------------------------*/
 .headerwrap{
 	width: 100%;

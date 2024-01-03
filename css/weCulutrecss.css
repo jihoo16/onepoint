@@ -38,7 +38,6 @@ h1{
 #wrapper{
 	width:100%;
 	position: relative;
-
 }
 .fwb{
 	font-weight: bold;
@@ -124,10 +123,13 @@ h1{
 	width: 100px;
 }
 .open{
+	cursor: pointer;
 	color: black;
 	padding: 10px;
 	font-size: 30px;
 	line-height: 50px;
+	position: relative;
+	z-index: 999;
 }
 .closeOpen, .nav a{
 	background-color: white;
@@ -142,10 +144,13 @@ h1{
 	z-index: 99;
 }
 .close{
+	cursor: pointer;
 	width: 100%;
 	font-size: 30px;
 	text-align: right;
 	padding: 20px;
+	position: relative;
+	z-index: 999;
 }
 .nav{
 	flex-direction: column;
@@ -249,25 +254,137 @@ h1{
 	width: 100%;	
 }
 .threewrap{
-	width: 90%;	
+	width: 70%;	
 	margin: 0 auto;
 	text-align: center;
+}
+.threewrap h1{
+	margin-bottom: 100px;
 }
 .threeinbox{
 	width: 100%;
 	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
 }
 .tibCard{
-	width: 33%;	
+	width: 33.33%;
+	max-width: 400px;
+	margin: 1%;
 }
-
-
+.tibCard img{
+	width: 192px;
+	margin-bottom: 20px;
+}
+.tibCard h5,.tibCard p, .tibCard h4{
+	padding:0 20px;
+}
+.tibCard h5{
+	margin-bottom: 20px;
+	font-size: 16px;
+	font-weight: bold;
+}
+.tibCard h4{
+	margin: 30px 0;
+	font-size: 18px;
+	font-weight: bold;
+}
+.tibCard p{
+	margin: 0;
+	font-size: 14px;
+}
+.tibCard span{
+	font-size: 14px;
+	text-align: left;
+}
+/*#fotrh 섹션--------------------------------------------------------*/
+#forth{
+	width: 100%;
+}
+.forthwrap{
+	width: 80%;
+	margin: 0 auto;
+}
+.forthtitle{
+	width: 100%;
+	text-align: center;
+	margin: 200px auto 100px;
+}
+.forthcardwrap{
+	width: 100%;
+	display: flex;
+	margin-bottom: 200px;
+}
+.forthcard{
+	width: 33.3%;
+	margin: 1%;
+}
+.forthcard h3{
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+.forthcard hr{
+	opacity: 1;
+	margin: 30px 0;
+}
+.forthcard p{
+	margin: 5px;
+	font-weight: bold;
+}
+.forthcard span{
+	margin-right: 10px;
+}
+/*#last 섹션--------------------------------------------------------*/
+#last{
+	width: 100%;
+	background-color: black;
+	padding: 50px;
+}
+.lastwrap{
+	text-align: center;
+	width: 50%;
+	color: white;
+	margin: 50px auto;
+	
+}
+.lastwrap h2{
+	margin-bottom: 50px;
+	font-weight: 900;
+}
+.lastwrap button{
+	width: 190px;
+	height: 40px;
+	border: none;
+	background-color: #087eff;
+	color: white;
+	border-radius: 10px;
+	font-weight: 900;
+}
+.up{
+	background-color: gray;
+}
+.up span{
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	position: fixed;
+	font-size: 40px;
+	bottom: 20px;
+	right: 20px;
+	background-color: gray;
+	border-radius: 50%;
+	color: white;
+	cursor: pointer;
+	display: none;
+}
 /*#footer 섹션--------------------------------------------------------*/
 footer{
 	width: 100%;
 
 	
 }
+
 .footerwrap{
 	width: 90%;
 	padding: 120px 0px 50px;
@@ -276,7 +393,15 @@ footer{
 	color: gray;
 	margin: 0 auto;
 }
-
+.hidewrap{
+	background-color: black;
+	opacity: 0.5;
+	position: fixed;
+	width: 1000px;
+	height: 1000px;
+	z-index: 9;
+	top: 0;
+}
 /***************************************************/
 /******************미디어 커리***********************/
 /***************************************************/
@@ -310,7 +435,12 @@ footer{
 	.firstin1,.firstin2,.hr{
 		width: 100%;
 	}
-
+	.threewrap{
+		width: 90%;
+	}
+	.forthwrap{
+		width: 90%;
+	}
 }
 /*****************************스마트폰 크기*************/
 @media screen and (max-width:767px){
@@ -330,7 +460,17 @@ footer{
 		right: 0;
 		height: 1000px;
 	}
-	
+	.threewrap{
+		width: 90%;
+	}
+	.threeinbox{
+		width: 100%;
+		display: block;
+	}
+	.tibCard{
+		width: 100%;
+		margin: 0 auto 50px;
+	}
 	footer{
 		padding: 80px 0px 0;
 	}
@@ -339,5 +479,18 @@ footer{
 	}
 	.firstin1,.firstin2,.hr,.blackbox{
 		width: 100%;
+	}
+	.forthwrap{
+		width: 90%;
+	}
+	.forthcard{
+		width: 100%;
+		margin-bottom: 100px;
+	}
+	.forthcardwrap{
+		display: block;
+	}
+	.lastwrap{
+		width: 95%;
 	}
 }
