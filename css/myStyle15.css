@@ -134,6 +134,7 @@ header{
 	transition: all	1s;
 	animation: ll 1s ;
 }
+
 @keyframes ll{
 	0%,100%{
 		opacity: 0;
@@ -200,12 +201,15 @@ header{
 	border: none;
 }
 #headercenter a{
+	width: 100%;
+	height: 100%;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 15px;
-	margin-top: 20px;
 	color: #ffffff;
+	display: block;
+	line-height: 60px;
 }
 
 
@@ -826,6 +830,10 @@ margin: 10px auto;
 	width: 15%;
 	margin: 1%;
 }
+.imgsize2 img{
+	height: 100%;
+	margin: 5%;
+}
 .imgsize{
 	position: relative;
 	left: -1%;
@@ -839,8 +847,7 @@ margin: 10px auto;
 .protext{
 	position: relative;
 	width: 30%;
-	height: 30%;
-	font-size: 1.5vw;
+	font-size: 1.3vw;
 	margin-left: 1%;
 }
 .protext div{
@@ -849,7 +856,7 @@ margin: 10px auto;
 }
 .protext span{
 	display: inline-block;
-	margin-top: 15%;
+	margin-top: 10%;
 	margin-bottom: 50%;
 }
 
@@ -863,7 +870,7 @@ margin: 10px auto;
 span.toggleon{
 	position: absolute;
 	right: 0;
-/*	top: -20px;*/
+	top: -20px;
 color: #087eff;
 visibility: hidden;
 animation: on 1s forwards;
@@ -879,7 +886,7 @@ cursor: auto ;
 span.toggleoff{
 	position: absolute;
 	right: 0;
-/*	top: -20px;*/
+	top: -20px;
 animation: off 1s forwards;
 font-size: 6em;
 cursor: auto ;
@@ -887,6 +894,10 @@ cursor: auto ;
 @keyframes off{
 	0%{visibility: visible;}
 	100%{visibility:hidden;}
+}
+.fivethirdone{
+	max-width: 500px;
+	margin: 0 auto;
 }
 .fivethirdoneitem p{
 	font-size: 22px;
@@ -919,17 +930,18 @@ padding: 5px 10px;
 }
 /*#6번째 섹션**********************/
 #six{
+	padding-top: 100px;
 	width: 100%;
-	background-color: #2b7ee8;
+	background: linear-gradient(#070707, #2b7ee8);
 /*	overflow: hidden;*/
-height: 700px;
+height: 1300px;
 position: relative;
 margin-bottom: 300px;
 }
 .siximg1{
 	width: 400px;
 	right: 50px;
-	top: 50px;
+	top: 250px;
 	animation: moving 10s ease-in-out infinite;
 	transform-origin: top left;
 	position: absolute;
@@ -938,7 +950,7 @@ margin-bottom: 300px;
 .siximg2{
 	width: 400px;
 	right: 350px;
-	top: 50px;
+	top: 250px;
 	animation: movinga 10s ease-in-out infinite;
 	transform-origin: top left;
 	position: absolute;
@@ -1216,6 +1228,23 @@ footer{
 	padding: 40px 10%;
 	color: gray;
 	font-size: 12px;
+}
+.videobtn{
+	width: 180px;
+	position: fixed;
+	bottom: 30px;
+	right:10%;
+	border: 1px solid #087eff;
+	text-align: center;
+	height: 70px;
+	line-height: 70px;
+	border-radius: 50px;
+	background-color: #101010;
+	color: #087eff;
+}
+#video-player{
+	position: fixed;
+	top: 20px;
 }
 /***************************************************/
 /******************미디어 커리***********************/

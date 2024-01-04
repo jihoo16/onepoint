@@ -117,7 +117,23 @@ $(function(){
 		}
 		const step = (timestamp) => {
 			if (!startTimestamp) startTimestamp = timestamp;
-			const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+			 progress = Math.min((timestamp - startTimestamp) / duration, 1);
+			obj.textContent  = Math.floor(progress * (end - start) + start);
+			if (progress < 1) {
+				window.requestAnimationFrame(step);
+			}
+		};
+		window.requestAnimationFrame(step);
+	}
+
+	function animateValue2(obj, start, end, duration,delay) {
+		
+		if (delay) {
+			startTimestamp = performance.now() + delay;
+		}
+		const step = (timestamp) => {
+			if (!startTimestamp) startTimestamp = timestamp;
+			 progress = Math.min((timestamp - startTimestamp+1000) / duration, 1);
 			obj.textContent  = Math.floor(progress * (end - start) + start);
 			if (progress < 1) {
 				window.requestAnimationFrame(step);
@@ -127,13 +143,14 @@ $(function(){
 	}
 
 	obj = document.getElementById("number");
+	obj4 = document.getElementById("number");
 	obj2 = document.getElementById("number2");
+	obj5 = document.getElementById("number2");
 	obj3 = document.getElementById("number3");
+	obj6 = document.getElementById("number3");
 	animateValue(obj, 0, 98, 1000);
 	animateValue(obj2, 0, 87, 1000);
 	animateValue(obj3, 0, 75, 1000);
-
-
 	let time1, time2, time3;
 
 
@@ -209,9 +226,9 @@ $(function(){
 		thirdinwrap.hide().stop();
 		thirdinwrap.hide();
 		
-		animateValue(obj, 0, 98, 1000,1000);
-		animateValue(obj2, 0, 87, 1000,1000);
-		animateValue(obj3, 0, 75, 1000,1000);
+		animateValue2(obj4, 0, 98, 1000,1000);
+		animateValue2(obj5, 0, 87, 1000,1000);
+		animateValue2(obj6, 0, 75, 1000,1000);
 		thirdinwrap2.stop().delay(0).show(0).delay(6990).hide(0);
 		five2.stop().delay(0).show(0).delay(6990).hide(0);
 		five3.stop().delay(7000).show(0).delay(8000).hide(0);
@@ -292,5 +309,11 @@ $(function(){
 			isFixed = false;
 		}
 	});
+	let vp = $("#video-player");
+	vp.hide();
+	$(".videobtn").click(function(){
+		vp.toggle();
+		
+	})
 
 });

@@ -6,6 +6,12 @@
 	font-weight: 400;
 	font-style: normal;
 }
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /*초기화*/
 
@@ -14,14 +20,13 @@
 	padding: 0;
 	/*border: 1px solid gray;*/
 	box-sizing: border-box;
-	font-family: 'Pretendard-Regular';
+	font-family: 'NanumSquareNeo-Variable';
 }
 html,body{
 	background-color: white;
 	color: black;
 	width: 100%;
 	height: 100%;
-/*	overflow-x: hidden;*/
 }
 a{
 	text-decoration: none;
@@ -33,8 +38,9 @@ h1{
 #wrapper{
 	width:100%;
 	position: relative;
-/*	background-color: #0f0f0f;*/
-
+}
+.fwb{
+	font-weight: bold;
 }
 .font24{
 	font-size: 24px;
@@ -83,15 +89,7 @@ h1{
 	width: 100%;
 }
 /*헤더 css*/
-.hidewrap{
-	background-color: black;
-	opacity: 0.5;
-	position: fixed;
-	width: 1000px;
-	height: 1000px;
-	z-index: 9;
-	top: 0;
-}
+
 /*네비게이션 바 css--------------------------------------------------------*/
 .headerwrap{
 	width: 100%;
@@ -125,11 +123,13 @@ h1{
 	width: 100px;
 }
 .open{
+	cursor: pointer;
 	color: black;
 	padding: 10px;
 	font-size: 30px;
 	line-height: 50px;
-	cursor: pointer;
+	position: relative;
+	z-index: 999;
 }
 .closeOpen, .nav a{
 	background-color: white;
@@ -144,11 +144,13 @@ h1{
 	z-index: 99;
 }
 .close{
+	cursor: pointer;
 	width: 100%;
 	font-size: 30px;
 	text-align: right;
 	padding: 20px;
-	cursor: pointer;
+	position: relative;
+	z-index: 999;
 }
 .nav{
 	flex-direction: column;
@@ -178,218 +180,87 @@ h1{
 }
 
 
-/*#first 섹션--------------------------------------------------------*/
-#first{
-	padding-top: 200px;
-	width: 100%;
-	background-color: black;
-	height: 1250px;
 
-}
-.firsttextbox{
-	width: 60%;
-	margin: 0 auto;
-	text-align: center;
-}
-.firsttextbox h1{
+/*#first 섹션--------------------------------------------------------*/
+
+#first{
 	width: 100%;
-	margin-bottom: 50px;
+	padding-top: 70px;
 }
-.firsttextbox p{
-	width: 100%;
-}
-.videobox{
-	width: 100%;
-	margin-bottom: 100px;
-}
-iframe{
+.firstwrap{
 	width: 90%;
-	height: 600px;
-	display: block;
-	margin: 0 auto;
+	margin: 100px auto;	
 }
-.buttonwrap{
-	width: 100%;
-	position: relative;
-	padding-right: 30px;
-	display: flex;
-	justify-content: flex-end
-}
-.button{
-	width: 130px;
-	height: 50px;
-	border: 1px solid white;
-	background-color: white;
-	position: relative;
-	border-radius: 10px;
+.blackbox{
 	text-align: center;
-	line-height: 50px;
+	width: 100px;
+	height: 60px;
+	line-height: 60px;
+	border-radius: 10px;
 }
-.button a{
-	color: black;
-	font-size: 14px;
+.firstwrap p{
+	margin: 20px 0 100px;
 }
 /*#second 섹션--------------------------------------------------------*/
 #second{
 	width: 100%;
 }
-.seconddivwrap{
-	width: 90%;
+.secondwrap{
+	width: 90%;	
 	margin: 0 auto;
-	padding-top: 70px;
 }
-.seconddiv{
-	width: 60%;
-	max-width: 720px;
+.secondinbox{
+	width: 100%;
+	display: flex;
 	margin-bottom: 100px;
 }
-.seconddiv h3{
-	font-weight: 900;
-}
-.seconddivindiv{
+.secondbox1{
 	width: 100%;
-	margin: 30px 0;
+	padding: 20px;
 }
-.seconddivwrap:nth-of-type(2){
-	display: flex;
-	justify-content: flex-end;
-	margin-bottom: 200px;
-}
-.seconddivwrap:nth-of-type(2) h3{
-	text-align: right;
-}
-/*#year 섹션--------------------------------------------------------*/
-#year{
+.flexbox{
 	width: 100%;
-	margin-bottom: 200px;
-}
-.yearwrap{
-	width: 95%;
-	display: flex;
-	margin: 0 auto;
-}
-hr{
-	background-color: black;
-    height:2px;
-    border:0;
-}
-.yeardiv{
-	padding: 10px;
-	width: 50%;
-}
-.yeardiv h2{
-	font-weight: 900;
-}
-.content{
-	display: flex;
-	margin-bottom: 10px;
-}
-.content p{
-	color: gray;
-	margin-right: 10px;
-	font-weight: 900;
-}
-/*#wecard 섹션--------------------------------------------------------*/
-#wecard{
-	width: 100%;
-}
-.wecarddiv{
-	width: 95%;
-	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 }
-.wecarddiv h2{
-	font-weight: 900;
-	margin-bottom: 100px;
+.secondbox2{
+	width: 100%;
+	padding: 0 20px;
 }
-.wecarddiv h2:nth-of-type(2){
-	text-align: right;
+.secondbox2 p{
+	font-size: 20px;
+	font-weight: bold;
+	margin: 0;
+	line-height: 78px;
 }
-.wecardwrap{
+.Qbox{
+	width: 100%;
 	display: flex;
-	justify-content: space-around;
-	margin-bottom: 200px;
-	flex-wrap: wrap;
-}
-.wecard{
-	padding: 10px;
-	width: 33%;
-	display: flex;
-	flex-direction: column;
+
 	justify-content: space-between;
-}
-.wecardwrap:nth-of-type(1) span{
-	text-align: center;
-	font-weight: 900;
-}
-.wecard img{
- width: 100%;
- border-radius: 10px;
+	
 
 }
-.wecard p{
-	color: gray;
-	font-weight: 900;
-	margin: 30px 0 20px;
-	font-size: 18px;
-}
-.wecard strong{
- font-size: 20px;
-}
-.wecard span{
+.Qbox span{
 	
-	margin: 30px 0 40px;
-	font-size: 15px;
+	line-height: 78px;
+	padding-left: 0px;
+	transition: all 0.3s;
 }
-.wecard a{
-	display: block;
-	width: 100%;
+.rotate{
+	transform: rotate(+180deg);
 }
-.wecard button{
-	width: 100%;
-	height: 40px;
-	border: none;
-	background-color: #087eff;
-	color: white;
-	border-radius: 10px;
-}
-.wecard h3{
-	font-weight: 900;
+.Abox{
 	margin-top: 30px;
-	font-size: 24px;
-}
-/*#last 섹션--------------------------------------------------------*/
-#last{
-	width: 100%;
-	background-color: black;
-	padding: 50px;
-}
-.lastwrap{
-	text-align: center;
-	width: 50%;
-	color: white;
-	margin: 50px auto;
-	
-}
-.lastwrap h2{
-	margin-bottom: 50px;
-	font-weight: 900;
-}
-.lastwrap button{
-	width: 190px;
-	height: 40px;
-	border: none;
-	background-color: #087eff;
-	color: white;
-	border-radius: 10px;
-	font-weight: 900;
+	margin-bottom: 30px;
 }
 /*#footer 섹션--------------------------------------------------------*/
 footer{
 	width: 100%;
+
 	
 }
+
 .footerwrap{
 	width: 90%;
 	padding: 120px 0px 50px;
@@ -397,6 +268,15 @@ footer{
 	font-weight: 900;
 	color: gray;
 	margin: 0 auto;
+}
+.hidewrap{
+	background-color: black;
+	opacity: 0.5;
+	position: fixed;
+	width: 1000px;
+	height: 1000px;
+	z-index: 9;
+	top: 0;
 }
 .up{
 	background-color: gray;
@@ -431,9 +311,7 @@ footer{
 	width: 60%;
 	justify-content: flex-end;
 }
-.seconddivwrap,.wecarddiv,.yearwrap,.footerwrap{
-	width: 70%;
-}
+
 
 }
 /*****************************작은 모니터 크기*************/
@@ -445,7 +323,13 @@ footer{
 	.open{
 		display: block;
 	}
-
+	.firstwrap{
+		display: block;
+	}
+	.secondinbox{
+		display: block;
+	}
+	
 }
 /*****************************스마트폰 크기*************/
 @media screen and (max-width:767px){
@@ -456,16 +340,8 @@ footer{
 	.open{
 		display: block;
 	}
-	iframe{
-		width: 100%;
-		height: 300px;
-		display: block;
-		margin: 0 auto;
-
-	}
-	#first{
-		height: 950px;
-	}
+	
+	
 	.closeOpen{
 		width: 50%;
 		position: fixed;
@@ -473,22 +349,13 @@ footer{
 		right: 0;
 		height: 1000px;
 	}
-	.seconddiv{
-		width: 100%;
-	}
-	.yearwrap{
-		display: block;
-	}
-	.yeardiv{
-		width: 100%;
-	}
-	.wecard{
-		width: 100% !important;
-	}
-	.lastwrap{
-		width: 95%;
-	}
+	
 	footer{
 		padding: 80px 0px 0;
 	}
+	.secondinbox{
+		display: block;
+	}
+	
+	
 }

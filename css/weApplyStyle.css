@@ -179,8 +179,8 @@ h1{
 }
 .textbox a:hover{
 	text-decoration: none;
-	scale: 1.2;
-	transition: all 1s;
+	scale: 1.1;
+	text-shadow: -1px 0px white, 0px 1px white, 1px 0px white, 0px -1px white;
 }
 
 /*#first 섹션--------------------------------------------------------*/
@@ -240,6 +240,7 @@ h1{
 .hiderow button,.smsize button{
 	cursor: default !important	;
 }
+
 /*#footer 섹션--------------------------------------------------------*/
 footer{
 	width: 100%;

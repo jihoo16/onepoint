@@ -161,7 +161,8 @@ h1{
 	padding-left: 40px;
 }
 .textbox a:hover{
-	background-color: #E3E0E0;
+	scale: 1.1;
+	text-shadow: -1px 0px white, 0px 1px white, 1px 0px white, 0px -1px white;
 }
 .textbox{
 	display: flex;
