@@ -129,6 +129,7 @@ h1{
 	padding: 10px;
 	font-size: 30px;
 	line-height: 50px;
+	cursor: pointer;
 }
 .closeOpen, .nav a{
 	background-color: white;
@@ -147,6 +148,7 @@ h1{
 	font-size: 30px;
 	text-align: right;
 	padding: 20px;
+	cursor: pointer;
 }
 .nav{
 	flex-direction: column;

@@ -11,6 +11,8 @@ $(function(){
 	open.click(function(){
 		closeOpen.show(1000);
 		hidewrap.show(1000);
+		closeOpen.css(" transform: translateX(-100%)");
+		hidewrap.css(" transform: translateX(100%)");
 		$("body").addClass('hidden');
 		close.show();
 		open.hide();
