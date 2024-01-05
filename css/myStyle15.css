@@ -74,7 +74,6 @@ h1{
 }
 /*헤더 css*/
 
-
 header{
 	width: 100%;
 	padding: 0px;
@@ -708,6 +707,7 @@ background-color: red;
 	width: 630px;
 	height: 504px;
 	margin: 0 auto;
+	cursor: pointer;
 }
 .videocon{
 	display: none;
@@ -719,7 +719,6 @@ background-color: red;
 	opacity: 1!important;
 	height:80%;
 
-
 }
 #hidebox{
 	display: none;
@@ -730,7 +729,7 @@ background-color: red;
 	top: 0;
 	z-index: 999;
 	background-color: #232429;
-	
+	cursor: pointer;
 }
 
 /*다섯번째 섹션*********************************/
@@ -1241,10 +1240,18 @@ footer{
 	border-radius: 50px;
 	background-color: #101010;
 	color: #087eff;
+	cursor: pointer;
+	z-index: 9999;
 }
 #video-player{
+	width: 100%;
 	position: fixed;
-	top: 20px;
+	top: 20%;
+	left: 50%;
+	z-index: 9999;
+	max-width: 1000px;
+	margin-left: -500px;
+
 }
 /***************************************************/
 /******************미디어 커리***********************/
@@ -1627,6 +1634,7 @@ footer{
 		width: 430px;
 		height: 304px;
 		margin: 0 auto;
+
 	}
 	.fivesecond{
 		width: 100%;

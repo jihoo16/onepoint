@@ -199,6 +199,10 @@ h1{
 	align-items: center;
 	border-radius: 10px;
 	height: 48px;
+	position: relative;
+}
+.dropdown-item{
+	z-index: 999;
 }
 .tagbtn{
 	font-size: 20px;

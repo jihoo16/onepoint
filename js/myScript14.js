@@ -37,7 +37,8 @@ $(function(){
 	let pthird = $(".pthird");
 	let startTimestamp = null;
 
-	xbtn.hide();
+	//햄버거 메뉴 스크립트
+	xbtn.hide(); 
 	ham.click(function(){
 		hambermenu.show();
 		$("body").addClass('hidden');
@@ -51,9 +52,7 @@ $(function(){
 		$("body").removeClass('hidden');
 	})
 
-	// 섹션 1의 마케팅 디자인 메뉴 호출
-
-
+	// 섹션 1의 마케팅 버튼들과 디자인 버튼들 메뉴 호출
 	mark.click(function(event) {
 		design.removeClass('white');
 		mark.addClass('white');
@@ -81,9 +80,7 @@ $(function(){
 		more.hide();
 	});
 
-
-
-
+	//네번째 섹션에 동영상 스크립트
 	forthimg.click(function(){
 		var videoUrl = $(this).data('video');
 		video = $('.videocon');
@@ -103,13 +100,9 @@ $(function(){
 
 	})
 	
-	hidebox.click(function(event) {
-		video[0].pause();
-		video.hide();
-		hidebox.hide();
-		
-	});
 
+
+	//다섯 번째 섹션에 숫자 카운트 되는 스크립트
 	function animateValue(obj, start, end, duration,delay) {
 		
 		if (delay) {
@@ -125,7 +118,7 @@ $(function(){
 		};
 		window.requestAnimationFrame(step);
 	}
-
+	//다섯 번째 섹션에 숫자 카운트 되는 스크립트2 2번 메뉴 클릭시 오류가 생겨서 수정하여 따로 사용
 	function animateValue2(obj, start, end, duration,delay) {
 		
 		if (delay) {
@@ -157,7 +150,7 @@ $(function(){
 	five.hide();
 	thirdinwrap.hide();
 
-
+	//다섯번째 섹션 애니메이션 스크립트
 	function animateddd() {
 		
 		thirdinwrap1.stop().show(0).delay(4990).hide(0);
@@ -177,6 +170,7 @@ $(function(){
 	}
 	
 	animateddd();
+	//다섯번째 섹션 setInterval 사용한 애니메이션 스크립트 지정 시간마다 반복되도록
 	function startAnimation() {
 
 		timeInterval = setInterval(function () {
@@ -199,7 +193,7 @@ $(function(){
 	startAnimation();
 
 	
-
+	//다섯번째 섹션 버튼 클릭시 보여지고 애니메이션 실행되는 스크립트
 	pone.click(function () {
 		clearInterval(timeInterval);
 		five.hide().stop();
@@ -259,9 +253,12 @@ $(function(){
 		startAnimation();
 
 	});
+
+	//fadeIn 되는 플러그인 스크립트
 	AOS.init();
 	
 	
+	//FAQ 질문 나타나고 사라지는 스크립트
 	let palqnawrap = $(".palqnawrap");
 	let palQ = $(".palqnawrap .palQ");
 
@@ -296,6 +293,7 @@ $(function(){
 		})
 	}
 
+	//12/28일 추가된 내용 헤더의 네브바가 스크롤 위로 올릴시 나타나고 내림면 사라지는 스크립트
 	var header = $('#headerdiv');
 	var isFixed = false;
 
@@ -309,11 +307,35 @@ $(function(){
 			isFixed = false;
 		}
 	});
+
+	//12/31일 추가된 내용 소개 영상 버튼 스크립트
 	let vp = $("#video-player");
 	vp.hide();
 	$(".videobtn").click(function(){
 		vp.toggle();
+		var videoUrl = $(this).data('video');
+		vp.find('source').attr('src', videoUrl);
+		vp[0].load();
+		vp[0].play();
+		hidebox.toggle();
 		
 	})
+	hidebox.click(function(event) {
+		vp.hide();
+		hidebox.hide();
+		video[0].pause();
+		vp[0].pause();
+		video.hide();
+		
+	});
+		$(window).scroll(function(){
+        // 스크롤이 페이지 하단에 도달하면
+		if ($(this).scrollTop() > 2000) {
+			$(".videobtn").fadeOut();
+		} else {
+			$(".videobtn").fadeIn();
+		}
+	});
+
 
 });

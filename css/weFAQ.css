@@ -236,7 +236,7 @@ h1{
 .Qbox{
 	width: 100%;
 	display: flex;
-
+	cursor: pointer;
 	justify-content: space-between;
 	
 
