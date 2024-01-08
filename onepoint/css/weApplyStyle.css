@@ -1,0 +1,326 @@
+/*폰트*/
+
+@font-face {
+	font-family: 'Pretendard-Regular';
+	src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+/*초기화*/
+
+*{
+	margin: 0;
+	padding: 0;
+	/*border: 1px solid gray;*/
+	box-sizing: border-box;
+	font-family: 'Pretendard-Regular';
+}
+html,body{
+	background-color: white;
+	color: black;
+	width: 100%;
+	height: 100%;
+
+}
+a{
+	text-decoration: none;
+	color: white;
+}
+
+h1{
+	font-weight: 900;
+}
+#wrapper{
+	width:100%;
+	position: relative;
+
+
+}
+.font24{
+	font-size: 24px;
+}
+.font20{
+	font-size: 20px;
+}
+.font42{
+	font-weight: 900;
+	font-size: 42px;
+}
+.font18{
+	font-size: 18px;
+}
+.font14{
+	font-size:14px;
+}
+.colorw{
+	color: white;
+}
+.colorp{
+	color: #087eff;
+}
+.colorb{
+	color: #0f0f0f;
+}
+.colorg{
+	color: gray;
+}
+.bgb{
+	background-color: #0f0f0f;;
+}
+.bgp{
+	background-color: #087eff;
+}
+.bgg{
+	background-color: #1C212d;
+}
+
+.active{
+	font-weight: 900;
+	background-color: #E3E0E0;
+}
+
+#wrapper{
+	width: 100%;
+
+}
+/*헤더 css*/
+.hidewrap{
+	background-color: black;
+	opacity: 0.5;
+	position: fixed;
+	width: 1000px;
+	height: 1000px;
+	z-index: 9;
+	top: 0;
+}
+/*네비게이션 바 css--------------------------------------------------------*/
+.headerwrap{
+	width: 100%;
+	height: 70px;
+	line-height: 70px;
+	display: flex;
+	font-weight: 900;
+	background-color: white;
+	position: fixed;
+	z-index: 9;
+}
+.imgbox{
+	width: 100%;
+	padding: 0 30px;
+}
+.headerwrap .nav{
+	width: 40%;
+
+}
+.headerwrap .nav a,.headerwrap .nav p{
+	cursor: pointer;
+	margin-right: 25px;
+	padding: 0 0px;
+}
+
+.headerwrap .nav a:hover,.headerwrap .nav p:hover{
+	color: #BBBBBB;
+}
+
+.headerwrap img{
+	width: 100px;
+}
+.open{
+	color: black;
+	padding: 10px;
+	font-size: 30px;
+	line-height: 50px;
+	cursor: pointer;
+	position: relative;
+	z-index: 999;
+}
+.closeOpen, .nav a{
+	background-color: white;
+	color: black;
+}
+.closeOpen{
+	width: 30%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 1000px;
+	z-index: 99;
+}
+.close{
+	width: 100%;
+	font-size: 30px;
+	text-align: right;
+	padding: 20px;
+	cursor: pointer;
+}
+.nav{
+	flex-direction: column;
+	position: relative;
+	padding: 30px 20px;
+}
+.nav a{
+	margin-bottom: 20px;
+	padding-left: 40px;
+}
+.textbox{
+	display: flex;
+	width: 60%;
+	justify-content: flex-end;
+	margin-right: 30px;
+	background-color: white;
+}
+.textbox a{
+	font-size: 14px;
+	color: black;
+	margin-top: 40;
+	text-align: center;
+	width: 100%;	
+}
+.textbox a:hover{
+	text-decoration: none;
+	scale: 1.1;
+	text-shadow: -1px 0px white, 0px 1px white, 1px 0px white, 0px -1px white;
+}
+
+/*#first 섹션--------------------------------------------------------*/
+#first{
+
+}
+.padding70{
+	padding-top: 70px;
+}
+.dropdown input{
+	width: 90%;
+
+	text-align: left;	
+}
+.dropdown{
+	align-items: center;
+	border-radius: 10px;
+	height: 48px;
+	position: relative;
+}
+.dropdown-item{
+	z-index: 999;
+}
+.tagbtn{
+	font-size: 20px;
+}
+.btnin{
+	font-size: 16px;
+}
+.tgbtn{
+	width: 100%;	
+}
+.tgbtn:hover{
+	background-color: lightgray;
+}
+.apply{
+	font-size: 20px;
+}
+.bbtn{
+	width: 90%;
+	height: 100px;
+	border-radius: 50px;
+	font-size: 20px;
+	font-weight: bold;
+}
+.bbtnspan{
+	margin: 20px 1%;
+	height: 60px;
+	line-height: 60px;
+	font-weight: 900;
+}
+.smsize span{
+	margin: 20px;
+	text-align: center;
+	padding-right: 10%;
+}
+.chatbtn{
+	height: 48px;
+	border-radius: 100px;
+}
+.hiderow button,.smsize button{
+	cursor: default !important	;
+}
+
+/*#footer 섹션--------------------------------------------------------*/
+footer{
+	width: 100%;
+}
+.footerwrap{
+	width: 90%;
+	padding: 120px 0px 50px;
+	font-size: 13px;
+	font-weight: 900;
+	color: gray;
+	margin: 0 auto;
+}
+.dropdown-toggle::after{
+	text-align: right;
+}
+/***************************************************/
+/******************미디어 커리***********************/
+/***************************************************/
+
+/*****************************큰모니터 크기*************/
+@media screen and (min-width:960px){
+/*헤더 데스크탑 미디어 커리 -----------------------------------------*/
+.open{
+	display: none;
+}
+.textbox{
+	display: flex;
+	width: 60%;
+	justify-content: flex-end;
+}
+.smsize{
+	display: none;
+}
+}
+/*****************************작은 모니터 크기*************/
+@media screen and (min-width:768px) and (max-width:959px){
+	/*헤더 테블릿 미디어 커리 -----------------------------------------*/
+	.textbox{
+		display: none;
+	}
+	.open{
+		display: block;
+	}
+	.hiderow{
+		display: none;
+	}
+	.smsize{
+		display: block;
+	}
+}
+/*****************************스마트폰 크기*************/
+@media screen and (max-width:767px){
+	/*헤더 스마트폰 미디어 커리 -----------------------------------------*/
+	.textbox{
+		display: none;
+	}
+	.open{
+		display: block;
+	}
+	
+	
+	.closeOpen{
+		width: 50%;
+		position: fixed;
+		top: 0;
+		right: 0;
+		height: 1000px;
+	}
+	
+	footer{
+		padding: 80px 0px 0;
+	}
+	.hiderow{
+		display: none;
+	}
+	.smsize{
+		display: block;
+	}
+}

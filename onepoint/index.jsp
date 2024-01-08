@@ -1,0 +1,919 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%
+String sessionId = (String) session.getAttribute("sessionId");
+%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>1⭕⭕⭕⭕원 포인트(One Point) - 탑티어 프리랜서 마케팅 매칭 서비스</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
+	<link
+	rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css"
+	/>
+
+	<link
+	rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.autoplay.css"
+	/>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="icon" sizes="57x57" href="https://1point.kr/favicon/apple-icon-57x57.png">
+	<link rel="icon" href="img/m_h1_logo.png">
+	<link
+	rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+	/>
+	<script src="js/jquery.mousewheel.js"></script>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+	<link rel="stylesheet" href="css/myStyle15.css">
+	<script src="js/myScript14.js"></script>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+		<!-- 네비가 들어가는 헤드 -->
+		<header >
+			<div id="headerdiv" class="">
+				<div id="logo" class="flex ">
+					<a href="index.jsp"><h1><img src="img/h-logo.png" alt=""></h1>
+					</a>
+					
+				</div>
+				<div id="buttondiv">
+					<a href="blog.html"><button class="probtn">Blog</button></a>
+					<a href="we.html"><button class="probtn">We're Hiring</button></a>
+					<a href="application.html"><button class="probtn">마케터 고용</button></a>
+					<c:choose>
+					<c:when test="${empty sessionId}">
+					<a href="login.jsp"><button id="loginbtn">로그인하기</button></a>
+					 </c:when>
+					 <c:otherwise>
+					 <button class="probtn" style="cursor: auto">[<%= sessionId %>] 님 로그인중</button>
+					 <a href='<c:url value = "logoutMember.jsp"/>'><button class="probtn">로그아웃</button></a>
+				</c:otherwise>
+				</c:choose>
+				</div>
+				<!-- 햄버거 메뉴 -->
+				<div class="hamburger">
+					<img class="menu-icon mob-menu-btn" src="img/menu.png" alt="logo">
+				</div>
+
+
+				
+
+				
+
+			</div>
+			<!-- 햄버거 메뉴 열렸을 때-->
+			<div id="hambermenu">
+				<a href="index.jsp"><h1><img src="img/h-logo.png" alt=""></h1>
+				</a>
+				<div class="close">
+					<img src="img/close.png" alt="logo">
+				</div>
+				<h3><a href="blog.html"><p>Blog</p></a>
+					<a href="we.html"><p>We're Hiring</p></a>
+					<a href="application.html"><p>Marketer</p></a>
+					<c:choose>
+					<c:when test="${empty sessionId}">
+					<a href="login.jsp"><button id="loginbtn1" class="buttomblue">로그인하기</button></a>
+					 </c:when>
+					 <c:otherwise>
+					 <a href=""style="cursor: auto;"><p>[<%= sessionId %>] 님 로그인중</p></a>
+					 <a href='<c:url value = "logoutMember.jsp"/>'><p>로그아웃</p></a>
+				</c:otherwise>
+				</c:choose>
+				</h3>
+				
+				
+			</div>
+
+			<!-- 두둥실 이미지 -->
+
+			<div class="flex">
+				<div class="headerimgdd">
+					<img src="img/v_absol01.png" alt="">
+					<img src="img/v_absol02.png" alt="">
+					<img src="img/v_absol03.png" alt="">
+					<img src="img/v_absol04.png" alt="">
+					<div class="textimg_wrap">
+						<div class="textimg">
+							<img src="img/v_absol05.png" alt="">
+
+						</div>
+						<div class="textimg textimg2">
+							<img src="img/v_absol05.png" alt="">
+
+						</div>
+					</div>
+				</div>
+
+				<div id="headercenter" >
+					<span>탑티어 프리랜서 마케터 매칭 서비스</span>
+					<h1>상위 10% 마케터를<br>필요한 만큼 고용하세요</h1>
+					<button class="buttomblue"><a href="application.html">지금 바로 고용하기</a></button><br>
+					<p>서비스 소개서가 필요하신가요?</p>
+				</div>
+			</div>
+
+		</header>
+
+		<!-- 탑티어 전문가의 분야별 스킬 -->
+
+		<section id="topPro">
+			<h2><span>탑티어 전문가의</span> <span>분야별 스킬을 확인하세요.</span></h2>
+			<p>어떤 엄무가 필요한지 모르겠다면, 매칭 컨설팅을 통해 결정하세요</p>
+
+			<!-- 마케팅 버튼들 -->
+
+			<h3><span class="marketing white">마케팅</span> <span class="design">디자인 • 경영</span><span class="badge bg-secondary">Beta</span></h3>
+			<div id ="blueborderbox_wrap">
+				<button type="button" class="btn btn-outline-primary" disabled>퍼포먼스 마케팅</button>
+				<button type="button" class="btn btn-outline-primary" disabled>브랜드 마케팅</button>
+				<button type="button" class="btn btn-outline-primary" disabled>콘텐츠 마케팅</button>
+				<button type="button" class="btn btn-outline-primary" disabled>CRM 마케팅</button>
+				<button type="button" class="btn btn-outline-primary" disabled>그로스 마케팅</button>
+				<button type="button" class="btn btn-outline-primary" disabled>카피라이팅</button>
+				<button type="button" class="btn btn-outline-primary" disabled>글로벌 마케팅</button>
+				<button type="button" class="btn btn-outline-primary" disabled>맵 마케팅</button>
+				<button type="button" class="btn btn-outline-primary" disabled>디지털 마케팅</button>
+				<button type="button" class="btn btn-outline-primary" disabled>SEO/SEM</button>
+				<button type="button" class="btn btn-outline-primary" disabled>검색광고</button>
+				<button type="button" class="btn btn-outline-primary" disabled>디스플레이광고</button>
+				<button type="button" class="btn btn-outline-primary" disabled>B2B 마케팅</button>
+				<button type="button" class="btn btn-outline-primary" disabled>이커머스 마케팅</button>
+				<button type="button" class="btn btn-outline-primary" disabled>구글 마케팅</button>
+				<button type="button" class="btn btn-outline-primary" disabled>메타 마케팅</button>
+				<button type="button" class="btn btn-outline-primary" disabled>네이버 마케팅</button>
+				<button type="button" class="btn btn-outline-primary" disabled>카카오 마케팅</button>
+				<button type="button" class="btn btn-outline-primary" disabled>제휴 마케팅</button>
+				<button type="button" class="btn btn-outline-primary" disabled>소셜 마케팅</button>
+				<button type="button" class="btn btn-outline-primary" disabled>마케팅 전략</button>
+				<button type="button" class="btn btn-outline-primary" disabled>미디어 플래닝</button>
+				<button type="button" class="btn btn-outline-primary" disabled>인플루언서 마케팅</button>
+				<button type="button" class="btn btn-outline-primary" disabled>이메일 마케팅</button>
+				<button type="button" class="btn btn-outline-primary" disabled>링크드인 마케팅</button>
+				<button type="button" class="btn btn-outline-primary" disabled>블로그 마케팅</button>
+				<button type="button" class="btn btn-outline-primary" disabled>유튜브 마케팅</button>
+				<button type="button" class="btn btn-outline-primary" disabled>PR</button>
+				<button type="button" class="btn btn-outline-primary" disabled>광고 기획</button>
+				<button type="button" class="btn btn-outline-primary" disabled>바이럴 마케팅</button>
+			</div>
+
+			<!-- 스마트폰 마케팅 버튼들 -->
+			<div id ="mb_blueborderbox_wrap">
+				<button type="button" class="btn btn-outline-primary" disabled>퍼포먼스 마케팅</button>
+				<button type="button" class="btn btn-outline-primary" disabled>브랜드 마케팅</button>
+				<button type="button" class="btn btn-outline-primary" disabled>콘텐츠 마케팅</button>
+				<button type="button" class="btn btn-outline-primary" disabled>CRM 마케팅</button>
+				<button type="button" class="btn btn-outline-primary" disabled>그로스 마케팅</button>
+				<button type="button" class="btn btn-outline-primary" disabled>카피라이팅</button>
+				<button type="button" class="btn btn-outline-primary" disabled>글로벌 마케팅</button>
+				<button type="button" class="btn btn-outline-primary" disabled>맵 마케팅</button>
+				<button type="button" class="btn btn-outline-primary" disabled>디지털 마케팅</button>
+				<button type="button" class="btn btn-outline-primary" disabled>SEO/SEM</button>
+				<button type="button" class="btn btn-outline-primary" disabled>검색광고</button>
+				<button type="button" class="btn btn-outline-primary" disabled>디스플레이광고</button>
+
+				<!-- 스마트폰 숨겨진 마케팅 버튼들 -->
+				<div class="hide">
+					<button type="button" class="btn btn-outline-primary" disabled>B2B 마케팅</button>
+					<button type="button" class="btn btn-outline-primary" disabled>이커머스 마케팅</button>
+					<button type="button" class="btn btn-outline-primary" disabled>구글 마케팅</button>
+					<button type="button" class="btn btn-outline-primary" disabled>메타 마케팅</button>
+					<button type="button" class="btn btn-outline-primary" disabled>네이버 마케팅</button>
+					<button type="button" class="btn btn-outline-primary" disabled>카카오 마케팅</button>
+					<button type="button" class="btn btn-outline-primary" disabled>제휴 마케팅</button>
+					<button type="button" class="btn btn-outline-primary" disabled>소셜 마케팅</button>
+					<button type="button" class="btn btn-outline-primary" disabled>마케팅 전략</button>
+					<button type="button" class="btn btn-outline-primary" disabled>미디어 플래닝</button>
+					<button type="button" class="btn btn-outline-primary" disabled>인플루언서 마케팅</button>
+					<button type="button" class="btn btn-outline-primary" disabled>이메일 마케팅</button>
+					<button type="button" class="btn btn-outline-primary" disabled>링크드인 마케팅</button>
+					<button type="button" class="btn btn-outline-primary" disabled>블로그 마케팅</button>
+					<button type="button" class="btn btn-outline-primary" disabled>유튜브 마케팅</button>
+					<button type="button" class="btn btn-outline-primary" disabled>PR</button>
+					<button type="button" class="btn btn-outline-primary" disabled>광고 기획</button>
+					<button type="button" class="btn btn-outline-primary" disabled>바이럴 마케팅</button>
+				</div>
+				<p>더보기<span class="material-symbols-outlined">
+					expand_more
+				</span></p>
+			</div>
+			<!-- 디자인 버튼들 -->
+			<div id ="hd_blueborderbox_wrap">
+				<button type="button" class="btn btn-outline-primary" disabled>브랜드 디자인</button>
+				<button type="button" class="btn btn-outline-primary" disabled>콘텐츠 디자인</button>
+				<button type="button" class="btn btn-outline-primary" disabled>상세페이지 디자인</button>
+				<button type="button" class="btn btn-outline-primary" disabled>그래픽 디자인</button>
+				<button type="button" class="btn btn-outline-primary" disabled>UX/UI 디자인</button>
+				<button type="button" class="btn btn-outline-primary" disabled>패키지 디자인</button>
+				<button type="button" class="btn btn-outline-primary" disabled>프로덕트 디자인</button>
+				<button type="button" class="btn btn-outline-primary" disabled>커뮤니케이션 디자인</button>
+				<button type="button" class="btn btn-outline-primary" disabled>웹 디자인</button>
+				<button type="button" class="btn btn-outline-primary" disabled>앱 디자인</button>
+				<button type="button" class="btn btn-outline-primary" disabled>편집 디자인</button>
+				<button type="button" class="btn btn-outline-primary" disabled>브랜드 전략</button>
+				<button type="button" class="btn btn-outline-primary" disabled>경영 전략</button>
+				<button type="button" class="btn btn-outline-primary" disabled>PM/PO</button>
+				<button type="button" class="btn btn-outline-primary" disabled>서비스 기획</button>
+				<button type="button" class="btn btn-outline-primary" disabled>데이터 분석</button>
+				<button type="button" class="btn btn-outline-primary" disabled>HR</button>
+				<button type="button" class="btn btn-outline-primary" disabled>투자/IR</button>
+				
+			</div>
+
+		</section>
+		<!-- 성장하는 기업은 원포인트를 이용 -->
+		<section id="imgani">
+			<div id="imganitext">
+				<span class="white">성장하는 기업</span>
+				<span>은</span>
+				<span class="white">원포인트</span>
+				<span>를</span>
+				<span class="white">이용합니다</span>
+			</div>
+			<!-- 첫줄 애니매이션 이미지 -->
+			<div id="imganidiv">
+				<div class="imganiimg">
+					<img src="img/grampus.svg" alt="">
+					<img src="img/blackTangerin.svg" alt="">
+					<img src="img/petbox.svg" alt="">
+					<img src="img/shipda.svg" alt="">
+					<img src="img/editmate.svg" alt="">
+					<img src="img/salady.svg" alt="">
+					<img src="img/cheescomics.svg" alt="">
+					<img src="img/bluebeaker.svg" alt="">
+				</div>
+				<div class="imganiimg3">
+					<img src="img/grampus.svg" alt="">
+					<img src="img/blackTangerin.svg" alt="">
+					<img src="img/petbox.svg" alt="">
+					<img src="img/shipda.svg" alt="">
+					<img src="img/editmate.svg" alt="">
+					<img src="img/salady.svg" alt="">
+					<img src="img/cheescomics.svg" alt="">
+					<img src="img/bluebeaker.svg" alt="">
+				</div>
+			</div>
+			<!-- 두번째 줄 애니매이션 이미지 -->
+			<div id="imganidiv2">
+				<div class="imganiimg2">
+					<img src="img/apartmentary.svg" alt="">
+					<img src="img/homeLiaison.svg" alt="">
+					<img src="img/intellectus.svg" alt="">
+					<img src="img/kivel.svg" alt="">
+					<img src="img/recl.svg" alt="">
+					<img src="img/sundayNamaste.svg" alt="">
+					<img src="img/wemeet.svg" alt="">
+					<img src="img/tourlive.svg" alt="">
+				</div>
+				<div class="imganiimg4">
+					<img src="img/apartmentary.svg" alt="">
+					<img src="img/homeLiaison.svg" alt="">
+					<img src="img/intellectus.svg" alt="">
+					<img src="img/kivel.svg" alt="">
+					<img src="img/recl.svg" alt="">
+					<img src="img/sundayNamaste.svg" alt="">
+					<img src="img/wemeet.svg" alt="">
+					<img src="img/tourlive.svg" alt="">
+				</div>
+
+			</div>
+		</section>
+		<!-- 실력있는 마케터 + 캐로셀 -->
+		<div class="hidehardwrap">
+			<section id="hard">
+				<div id="hardwrap">
+					<div id="hardleft">
+						<span>왜 프리랜서 고용이 필요한가요?</span>
+						<h2>
+
+							<p class="white">실력 있는 마케터</p>
+							채용이 어렵거나<br>
+							<span class="white">풀타임 고용</span>이<br>
+							부담스럽다면
+						</h2>
+						<p class="hide">검증된 전문가를 <br><span class="blue">필요한 만큼</span> 활용해보세요.</p>
+					</div>
+					<!-- 케러셀 카드 부분 -->
+					<div class="hardaniwrap ">
+						<div id="hardani">
+							<div class="f-carousel" id="myCarousel">
+								<div class="f-carousel__slide">
+								<div class="card text-bg-primary" >
+									<div class="card-header">Blaix 
+										<p>퍼포먼스 마케터</p>
+									</div>
+									<img src="img/profile01.svg" alt="">
+									<div class="card-body">
+										<p class="card-text">
+											<span class="badge rounded-pill text-bg-secondary">7년차</span>
+										</p>
+										<p>무신사 출신</p>
+										<p class="card-text">
+											<span class="badge rounded-pill text-bg-secondary">스킬</span>
+										</p>
+										<p>커머스 전문가 / 광고 소재 기획 / Meta 운영
+										</p>
+										<p class="card-text">
+											<span class="badge rounded-pill text-bg-secondary">스타일</span>
+										</p>
+										<p>활발한 의사소통 / 꼼꼼한 업무진행
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="f-carousel__slide">
+								<div class="card text-bg-primary ">
+									<div class="card-header">Qlee
+										<p>그로스 마케터
+										</p>
+									</div>
+									<img src="img/profile02.svg" alt="">
+									<div class="card-body">
+										<p class="card-text">
+											<span class="badge rounded-pill text-bg-secondary">9년차</span>
+										</p>
+										<p>하이퍼커넥트 출신
+										</p>
+										<p class="card-text">
+											<span class="badge rounded-pill text-bg-secondary">스킬</span>
+										</p>
+										<p>데이터 분석 / 앱 캠페인 / 미디어 믹스
+										</p>
+										<p class="card-text">
+											<span class="badge rounded-pill text-bg-secondary">스타일</span>
+										</p>
+										<p>명확한 의사소통 / 세밀한 분석
+										</p>
+
+									</div>
+								</div>
+							</div>
+							<div class="f-carousel__slide">
+								<div class="card text-bg-primary ">
+									<div class="card-header">junbug
+										<p>콘텐츠 마케터</p>
+									</div><img src="img/profile03.svg" alt="">
+									<div class="card-body">
+										<p class="card-text">
+											<span class="badge rounded-pill text-bg-secondary">4년차</span>
+										</p>
+										<p>블랭크코퍼레이션 출신
+										</p>
+										<p class="card-text">
+											<span class="badge rounded-pill text-bg-secondary">스킬</span>
+										</p>
+										<p>SNS 전문가 / 상세페이지 개선 / 콘텐츠 기획
+										</p>
+										<p class="card-text">
+											<span class="badge rounded-pill text-bg-secondary">스타일</span>
+										</p>
+										<p>선제적 제안 / 빠른 업무처리
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="f-carousel__slide">
+								<div class="card text-bg-primary ">
+									<div class="card-header">솔
+										<p>브랜드 마케터</p>
+									</div><img src="img/profile01.svg" alt="">
+									<div class="card-body">
+										<p class="card-text">
+											<span class="badge rounded-pill text-bg-secondary">10년차</span>
+										</p>
+										<p>카카오 / 아모레퍼시픽 출신
+										</p>
+										<p class="card-text">
+											<span class="badge rounded-pill text-bg-secondary">스킬</span>
+										</p>
+										<p>브랜드 전략 / 뷰티 전문가
+										</p>
+										<p class="card-text">
+											<span class="badge rounded-pill text-bg-secondary">스타일</span>
+										</p>
+										<p>효율적 커뮤니케이션 / 오너십
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="f-carousel__slide">
+								<div class="card text-bg-primary ">
+									<div class="card-header">에릭
+										<p>디자이너
+										</p>
+									</div><img src="img/profile02.svg" alt="">
+									<div class="card-body">
+										<p class="card-text">
+											<span class="badge rounded-pill text-bg-secondary">10년차</span>
+										</p>
+										<p>BAT 출신</p>
+										<p class="card-text">
+											<span class="badge rounded-pill text-bg-secondary">스킬</span>
+										</p>
+										<p>광고 소재 제작 / 상세페이지 디자인
+										</p>
+										<p class="card-text">
+											<span class="badge rounded-pill text-bg-secondary">스타일</span>
+										</p>
+										<p>적극적 의견수용 / 디테일한 업무처리
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+</div>
+
+					</div>
+
+				</section>
+			</div>
+
+
+
+			<!-- 애니메이션 캐로셀 -->
+			<section id="forth">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 text-center forthcol">
+							<p>더욱 쉽고 자세하게</p>
+							<p>원포인트를 알아보세요</p>
+						</div>
+						<div class="forthp text-center"><p>고객사와 전문가의 생생한 인터뷰</p></div>
+						<img class="videoimg" src="img/interview_thumb3.png">
+					</div>
+				</div>
+			</section>
+			<!-- why one point? 캐로셀 -->
+			<section id="five">
+				<div class="fivewrap">
+					<div class="fivefirst"><p>WHY ONE POINT?</p>
+					</div>
+					<div class="fivesecondwrap">
+						<div class="fivesecond">
+							<div class="fivesecondwrapin">
+								<div class="secondone">
+									상위 10%<span>의</span> <br>
+									검증된 전문가<span>만</span> <br> 
+									추천<span>해드려요.</span>
+								</div>
+								<div class="secondtwo">
+									딱 맞는 전문가<span>를</span><br>
+									추천<span>해드려요.</span>
+								</div>
+								<div class="secondthree">
+									필요한 만큼 <span>만</span><br>
+									활용<span>하세요.</span>
+								</div>
+							</div>
+							<div class="secondunder">
+								<div class="pone">
+									<p>01</p>
+									<div class="stext">검증된 전문가
+									</div>
+								</div>
+								<div class="ptwo">
+									<p>02</p>
+									<div class="stext">최적 매칭
+									</div>
+								</div>
+								<div class="pthird">
+									<p>03</p>
+									<div class="stext">이용 유연성
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- 다섯번째 섹션 첫번째 애니메이션 부분 -->
+						<div class="wrapfive">
+
+							<div class="fivethirdwrap five1 five">
+								<div class="fivethird">
+									<div class="fivethirdone">
+										<div class="fivethirdoneitem animate__animated animate__bounce w-100 animate__delay-0.5s" >
+											<img src="img/slide02_parts01-mo.png" alt="">
+										</div>
+										<div class="fivethirdoneitem animate__animated animate__fadeInDown animate__delay-1s">
+											<img src="img/slide02_parts02-mo.png" alt="">	
+										</div> 
+										<div class="fivethirdoneitem animate__animated animate__fadeInDown animate__delay-2s wow">
+											<img src="img/slide02_parts03-mo.png" alt="">
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 다섯번째 섹션 두번째 애니메이션 부분 -->
+							<div class="fivethirdwrap five2 five">
+								<div class="fivethird ">
+									<div class="fivethirdone">
+										<div class="fivethirdoneitem imgsize fll">
+											<img src="img/slide02_parts04.png" alt="">
+										</div>
+										<div class="fivethirdoneitem imgsize2 fll">
+											<img src="img/slide02_parts06.png" alt="">
+											<img src="img/slide02_parts07.png" alt="">
+											<img src="img/slide02_parts08.png" alt="">
+										</div> 
+										<div class="fivethirdoneitem protext fll">
+											<span>적합도 
+												<div id="number">
+												</div> %
+											</span>
+											<span>적합도 <div id="number2"></div> %</span>
+											<span>적합도 <div id="number3"></div> %
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 다섯번째 섹션 세번째 애니메이션 부분 -->
+							<div class="hidewrap">
+								<div class="fivethirdwrap five3 five">
+									<div class="fivethird">
+										<div class="fivethirdone">
+											<div class="fivethirdoneitem">
+												<p>익월 연장 여부</p>
+												<span class="material-symbols-outlined flr toggleoff">
+													toggle_off
+												</span>
+												<span class="material-symbols-outlined toggleon flr">
+													toggle_on
+												</span>
+											</div>
+											<div class="fivethirdoneitem ">
+												<p>자동 연장하기</p>
+
+											</div> 
+											<div class="fivethirdoneitem ">
+												<p>주 활용 업무 시간</p>
+												<select class="form-select w-50 p-0 " aria-label="Default select example" disabled>
+													<option value="1">5 시간</option>
+													<option value="2">10시간</option>
+													<option value="3" selected>20시간</option>
+													<option value="4">40시간</option>
+
+												</select>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 다섯번째 섹션 애니메이션 및 텍스트 부분 -->
+					<div class="thirdtextarea">
+						<div class="thirdinwrapone thirdinwrap">
+							<p class="fivethirdp">검증된 전문가</p>
+							<span class="fivethirdspan">까다로운 3단계 검증 프로세스를 거쳐 업계 상위 10% 전문가만 자사 전문가 Pool로 선발합니다</span>
+						</div>
+						<div class="thirdinwraptwo thirdinwrap">
+							<p class="fivethirdp">최적 매칭</p>
+							<span class="fivethirdspan">까다로운 3단계 검증 프로세스를 거쳐 업계 상위 10% 전문가만 자사 전문가 Pool로 선발합니다</span>
+						</div>
+						<div class="thirdinwrapthree thirdinwrap">
+							<p class="fivethirdp">이용 유연성</p>
+							<span class="fivethirdspan">필요한 시간, 필요한 기간 만큼만 이용할 수 있는 유연한 서비스입니다</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</section>
+		<!-- 이프로세스는 이렇게 진행됩니다. -->
+		<section id="six">
+			<img class="siximg2" src="img/p_absol02.png" alt="">
+			<img class="siximg1" src="img/p_absol01.png" alt="">
+			<div class="sixwrap">
+				<div class="sixin1">
+					<div class="sixin1and1">이용 프로세스는 <br> 이렇게 진행됩니다.</div>
+					<div class="sixin1and2">평균 10일 내에 실력 있는 전문가를 고용할 수 있습니다.</div>
+				</div>
+				<div class="sixin2">
+					<div class="sixin2card">
+						<div class="sixin2cardimg">
+							<img src="img/process01.svg" alt="">
+							<img src="img/arrow2.svg" alt="">
+						</div>
+						<div class="sixin2cardp">신청</div>
+						<div class="sixin2cardspan">신청서를 작성하고 업무 구체화 도움을 받습니다.</div>
+					</div>
+					<div class="sixin2card">
+						<div class="sixin2cardimg">
+							<img src="img/process02.svg" alt="">
+							<img src="img/arrow2.svg" alt="">
+						</div>
+						<div class="sixin2cardp">추천</div>
+						<div class="sixin2cardspan">기업의 특성과 니즈에 맞는 최적 전문가를 추천받습니다.</div>
+					</div>
+					<div class="sixin2card">
+						<div class="sixin2cardimg">
+							<img src="img/process03.svg" alt="">
+							<img src="img/arrow2.svg" alt="">
+						</div>
+						<div class="sixin2cardp">인터뷰</div>
+						<div class="sixin2cardspan">화상 미팅을 통해 전문가의 실력과 Fit을 검증합니다.</div>
+					</div>
+					<div class="sixin2card">
+						<div class="sixin2cardimg">
+							<img src="img/process04.svg" alt="">
+							<img class="sixlastarrow" src="img/arrow2.svg" alt="">
+						</div>
+						<div class="sixin2cardp">계약</div>
+						<div class="sixin2cardspan">협의와 계약을 마치고 전문가와 함께 일합니다.</div>
+
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!-- best Practice -->
+		<section id="seven">
+			<div class="sevenwrap">
+				<div class="headtext">Best Pracice</div>
+				<div class="headp">원포인트 고객사의 실제 성공 사례 입니다.</div>
+				<div class="sevencardwrap">
+					<a href="blog.html" class="colorw" data-aos="fade-up"><div class="sevencardwrap1 scw">
+						<div class="sevenCardNumber">1</div>
+						<div class="sevenText colorw font24">샐러디는 어떻게 배달앱<br>인기 검색어 1위에 올랐을까?</div>
+						<div class="sevenArrow"><img src="img/arrow.svg" alt=""></div>
+
+						<div class="sevenButton colorp">마케팅 캠페인</div>
+						<div class="sevenImg"><img src="img/bp_salady.png" alt=""></div>
+					</div></a>
+					<a href="blog.html" class="colorw" data-aos="fade-up"><div class="sevencardwrap2 scw">
+						<div class="sevenCardNumber">2</div>
+						<div class="sevenText colorw font24">홈리에종이 마케팅 담당자 퇴사에도<br>성과를 개선한 비결은?</div>
+						<div class="sevenArrow"><img src="img/arrow.svg" alt=""></div>
+						<div class="sevenButton colorp">마케팅 전략</div>
+						<div class="sevenImg"><img src="img/bp_homeliaison.png" alt=""></div>
+					</div></a>
+					<a href="blog.html" class="colorw" data-aos="fade-up"><div class="sevencardwrap3 scw">
+						<div class="sevenCardNumber">3</div>
+						<div class="sevenText colorw font24">580억 투자받은 아파트멘터리가<br>잘하는 마케터 고용한 방법</div>
+						<div class="sevenArrow"><img src="img/arrow.svg" alt=""></div>
+						<div class="sevenButton colorp">콘텐츠 마케팅</div>
+						<div class="sevenImg"><img src="img/bp_ap.png" alt=""></div>
+					</div></a>
+					<a href="blog.html" class="colorw" data-aos="fade-up"><div class="sevencardwrap4 scw">
+						<div class="sevenCardNumber">4</div>
+						<div class="sevenText colorw font24">비티와이플러스가 대행사 대신<br>마케터 시간제 고용을 택한 이유</div>
+						<div class="sevenArrow"><img src="img/arrow.svg" alt=""></div>
+						<div class="sevenButton colorp">퍼포먼스 마케팅</div>
+						<div class="sevenImg"><img src="img/bp_btyplus.png" alt=""></div>
+					</div></a>
+					<a href="blog.html" class="colorw" data-aos="fade-up"><div class="sevencardwrap5 scw">
+						<div class="sevenCardNumber">5</div>
+						<div class="sevenText colorw font24">초기 스타트업 리클이 <br> 경력직 마케터 채용 대신 선택한 것</div>
+						<div class="sevenArrow"><img src="img/arrow.svg" alt=""></div>
+						<div class="sevenButton colorp">그로스 마케팅</div>
+						<div class="sevenImg"><img src="img/bp_recl.png" alt=""></div>
+					</div></a>
+					<a href="blog.html" class="colorw" data-aos="fade-up"><div class="sevencardwrap6 scw">
+						<div class="sevenCardNumber">6</div>
+						<div class="sevenText colorw font24">초기 커머스 기업이<br>탑티어 마케터와 일할 수 있던 비결은?</div>
+						<div class="sevenArrow"><img src="img/arrow.svg" alt=""></div>
+						<div class="sevenButton colorp">퍼포먼스 마케팅</div>
+						<div class="sevenImg"><img src="img/bp_daybyme.png" alt=""></div>
+					</div></a>
+
+
+					<div class="plusbtn colorw font24"><a href="blog.html" class="colorw">+ 더보기</a></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- FAQ -->
+		<section id="pal">
+			<div class="palwrap">
+				<div class="headtext">
+					FAQ
+				</div>
+				<div class="headp">많이 궁금해 하는 질문들을 모았습니다.</div>
+				<div class="palqnawrap">
+					<div class="palqna">
+						<span class="font24">Q.</span>
+
+						<div class="palQ font20">
+
+							전문가 매칭에는 기간이 얼마나 소요되나요?
+
+
+						</div>
+						<div class="palQimgbox">
+							<img src="img/arrow-d_wh.svg" alt="" class="rotate">
+							<img src="img/arrow-d_wh.svg" alt="" class="unrotate">
+
+						</div>
+
+
+
+					</div>
+				</div>
+				<div class="palqnawrap">
+					<div class="palqna">
+						<span class="font24">A.</span>
+						<div class="pqlA">사안에 따라 다르지만 평균적으로 영업일 기준으로 5일 내에 최적 전문가를 매칭해드립니다.</div>
+					</div>
+				</div>
+				<div class="palqnawrap">
+					<div class="palqna">
+						<span class="font24">Q.</span>
+
+						<div class="palQ font20">
+
+							원포인트에서 어떤 전문가와 함께 일할 수 있나요?
+
+
+						</div>
+						<div class="palQimgbox">
+							<img src="img/arrow-d_wh.svg" alt="" class="rotate">
+							<img src="img/arrow-d_wh.svg" alt="" class="unrotate">
+
+						</div>
+
+
+
+					</div>
+				</div>
+				<div class="palqnawrap">
+					<div class="palqna">
+						<span class="font24">A.</span>
+						<div class="pqlA"><p>마케팅과 관련된 모든 전문가를 보유하고 있습니다.</p> <p>세부적으로는 퍼포먼스 마케터 / 콘텐츠 마케터 / 브랜드 마케터 / CRM 마케터 / 디자이너 / 카피라이터가 있습니다.</p></div>
+					</div>
+				</div>
+				<div class="palqnawrap">
+					<div class="palqna">
+						<span class="font24">Q.</span>
+
+						<div class="palQ font20">
+
+							전문가에게 어떤 업무를 요청할 수 있을까요?
+
+
+						</div>
+						<div class="palQimgbox">
+							<img src="img/arrow-d_wh.svg" alt="" class="rotate">
+							<img src="img/arrow-d_wh.svg" alt="" class="unrotate">
+
+						</div>
+
+					</div>
+
+				</div>
+				<div class="palqnawrap">
+					<div class="palqna">
+						<span class="font24">A.</span>
+						<div class="pqlA"><p>전문가와 사전에 협의된 예상 시간/업무 범위 내에서라면 어떤 업무든 요청 가능합니다.</p> <p>원포인트는 전문가 '고용' 서비스 입니다. 풀타임 정규직 팀원에게 요청 주시는 것과 동일한 방식으로 협업하시면 됩니다.</p></div>
+					</div>
+				</div>
+				<div class="palqnawrap">
+					<div class="palqna">
+						<span class="font24">Q.</span>
+
+						<div class="palQ font20">
+
+							서비스 비용은 어떻게 책정되나요?
+
+
+						</div>
+						<div class="palQimgbox">
+							<img src="img/arrow-d_wh.svg" alt="" class="rotate">
+							<img src="img/arrow-d_wh.svg" alt="" class="unrotate">
+
+						</div>
+
+
+					</div>
+				</div>
+				<div class="palqnawrap">
+					<div class="palqna">
+						<span class="font24">A.</span>
+						<div class="pqlA"><p>비용은 전문가의 이력 및 역량 수준과 업무 난이도를 고려하여 매칭된 전문가와의 협의를 통해 4주 기준으로 책정됩니다.</p> <p>정확한 비용은 전문가 제안 시 알 수 있지만, 활용 시간별 평균 단가는 상담 시 안내해드립니다.</p> <p>전문가 인건비만 지불하시면 되고, 고객사가 부담하는 매칭 수수료는 없습니다.</p></div>
+					</div></div>
+					<div class="palqnawrap">
+						<div class="palqna">
+							<span class="font24">Q.</span>
+
+							<div class="palQ font20">
+
+								필요에 따라 주 활용 시간을 변경할 수 있나요? 
+
+
+							</div>
+							<div class="palQimgbox">
+								<img src="img/arrow-d_wh.svg" alt="" class="rotate">
+								<img src="img/arrow-d_wh.svg" alt="" class="unrotate">
+
+							</div>
+
+
+
+						</div>
+					</div>
+					<div class="palqnawrap">
+						<div class="palqna">
+							<span class="font24">A.</span>
+							<div class="pqlA"><p>네, 주 활용 시간은 5시간부터 40시간까지 자유롭게 변경 가능합니다. </p><p>단, 계약 단위에 맞춰 4주 단위로 가능하며, 실제 업무 수행 시간이 계약 시간보다 자주 초과하는 경우에 한해서 4주 내에 상향 조정이 가능합니다.</p> <p>모든 의사 결정은 고객사 - 전문가 합의 하에 진행됩니다.</p></div>
+						</div></div>
+						<div class="palqnawrap">
+							<div class="palqna">
+								<span class="font24">Q.</span>
+
+								<div class="palQ font20">
+
+									전문가와 일할 때 커뮤니케이션은 어떻게 하나요? 
+
+
+								</div>
+								<div class="palQimgbox">
+									<img src="img/arrow-d_wh.svg" alt="" class="rotate">
+									<img src="img/arrow-d_wh.svg" alt="" class="unrotate">
+
+								</div>
+							</div>
+
+
+						</div>
+						<div class="palqnawrap">
+							<div class="palqna">
+								<span class="font24">A.</span>
+								<div class="pqlA"><p>비대면 근무가 원칙이며, 원포인트가 개설해드리는 슬랙 채널 내에서 협업이 진행됩니다. </p><p>다만, 내부에서 사용하는 협업 툴이 더 편하신 경우, 전문가의 동의를 얻은 후 해당 툴을 통해 업무를 진행하실 수 있습니다.</p></div>
+							</div>
+						</div>
+					</section>
+					<!-- footer -->
+					<footer>
+						<div class="footerwrap">	
+							<div class="footer1div1">
+								<h1>주식회사 롸잇</h1>
+								<p class="font20">탑티어 프리랜서 마케터 매칭 서비스</p>
+							</div>
+							<div class="footer1div2">
+								<p class="colorg">COMPANY INFO</p>
+								<p class="colorg">대표자 | 최준순</p>
+								<p class="colorg">주소 ㅣ 서울시 마포구 백범로 31길 21 409호</p>
+								<p class="colorg">이메일 | hello@1point.kr</p>
+							</div>
+							<div class="footer1div3">
+								<p class="colorg">BUSINESS INFO</p>
+								<p class="colorg">사업자등록번호 | 466-87-02214</p>
+								<p class="colorg">통신판매업신고 ㅣ 2023-서울마포-0818</p>
+								<p class="colorg">개인정보관리책임자 | 연준현</p>
+							</div>
+						</div>
+						<div class="footerwrap">
+							<p>Backed by</p>
+							<div class="footerimgbox">
+								<img src="img/mashup_white.png" alt="">
+								<img src="img/sopoong_white.png" alt="">
+								<img src="img/tips_logo.png" alt="">
+							</div>
+						</div>
+					</footer>
+					<div class="videobtn">원포인트 소개영상</div>
+					<hr>	
+					<div class="copy">
+						Copyright &copy; 2022-2023 | Right Inc. | All rights reserved
+					</div>
+
+					<video id="interview-video-player" class="videocon" width="100%" poster="https://1point.kr/onepoint/assets/images/main/interview_thumb3.png"controls="" src="https://storage.googleapis.com/static.1point.kr/media/1point_interview.mp4"></video>
+					<div id="hidebox"></div>
+					<video id="video-player" width="100%" controls="" src="https://storage.googleapis.com/static.1point.kr/media/1point_video.mp4" playsinline=""></video>
+				</div>
+
+				<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+				<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
+				<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.autoplay.umd.js"></script>
+				<script>
+					new Carousel(document.getElementById("myCarousel"), {
+						Autoplay : {
+							progressParentEl : (autoplay) => {
+								return autoplay.instance.viewport;
+							}
+						}
+					}, {
+						Autoplay
+					});
+				</script>
+			</body>
+			</html>

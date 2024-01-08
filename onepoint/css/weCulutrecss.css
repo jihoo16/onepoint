@@ -1,0 +1,498 @@
+/*폰트*/
+
+@font-face {
+	font-family: 'Pretendard-Regular';
+	src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*초기화*/
+
+*{
+	margin: 0;
+	padding: 0;
+	/*border: 1px solid gray;*/
+	box-sizing: border-box;
+	font-family: 'NanumSquareNeo-Variable';
+}
+html,body{
+	background-color: white;
+	color: black;
+	width: 100%;
+	height: 100%;
+}
+a{
+	text-decoration: none;
+	color: white;
+}
+h1{
+	font-weight: 900;
+}
+#wrapper{
+	width:100%;
+	position: relative;
+}
+.fwb{
+	font-weight: bold;
+}
+.font24{
+	font-size: 24px;
+}
+.font20{
+	font-size: 20px;
+}
+.font42{
+	font-weight: 900;
+	font-size: 42px;
+}
+.font18{
+	font-size: 18px;
+}
+.font14{
+	font-size:14px;
+}
+.colorw{
+	color: white;
+}
+.colorp{
+	color: #087eff;
+}
+.colorb{
+	color: #0f0f0f;
+}
+.colorg{
+	color: gray;
+}
+.bgb{
+	background-color: #0f0f0f;;
+}
+.bgp{
+	background-color: #087eff;
+}
+.bgg{
+	background-color: #1C212d;
+}
+
+.active{
+	font-weight: 900;
+	background-color: #E3E0E0;
+}
+
+#wrapper{
+	width: 100%;
+}
+/*헤더 css*/
+
+/*네비게이션 바 css--------------------------------------------------------*/
+.headerwrap{
+	width: 100%;
+	height: 70px;
+	line-height: 70px;
+	display: flex;
+	font-weight: 900;
+	background-color: white;
+	position: fixed;
+	z-index: 9;
+}
+.imgbox{
+	width: 100%;
+	padding: 0 30px;
+}
+.headerwrap .nav{
+	width: 40%;
+
+}
+.headerwrap .nav a,.headerwrap .nav p{
+	cursor: pointer;
+	margin-right: 25px;
+	padding: 0 0px;
+}
+
+.headerwrap .nav a:hover,.headerwrap .nav p:hover{
+	color: #BBBBBB;
+}
+
+.headerwrap img{
+	width: 100px;
+}
+.open{
+	cursor: pointer;
+	color: black;
+	padding: 10px;
+	font-size: 30px;
+	line-height: 50px;
+	position: relative;
+	z-index: 999;
+}
+.closeOpen, .nav a{
+	background-color: white;
+	color: black;
+}
+.closeOpen{
+	width: 30%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 1000px;
+	z-index: 99;
+}
+.close{
+	cursor: pointer;
+	width: 100%;
+	font-size: 30px;
+	text-align: right;
+	padding: 20px;
+	position: relative;
+	z-index: 999;
+}
+.nav{
+	flex-direction: column;
+	position: relative;
+}
+.nav a{
+	margin-bottom: 20px;
+	padding-left: 40px;
+}
+.textbox a:hover{
+	scale: 1.1;
+	text-shadow: -1px 0px white, 0px 1px white, 1px 0px white, 0px -1px white;
+}
+.textbox{
+	display: flex;
+	width: 60%;
+	justify-content: flex-end;
+	margin-right: 30px;
+	background-color: white;
+}
+.textbox a{
+	font-size: 14px;
+	color: black;
+	margin-top: 40;
+	text-align: center;
+	width: 100%;	
+}
+
+
+
+/*#first 섹션--------------------------------------------------------*/
+
+#first{
+	width: 100%;
+	padding-top: 70px;
+}
+.firstwrap{
+	width: 80%;
+	margin: 100px auto;
+	display: flex;	
+}
+.firstin1{
+	width: 50%;
+}
+.firstin1 h1{
+	font-weight: 900;
+	font-size: 48px;
+}
+.fistin2{
+	width: 50%;
+}
+.hr{
+	width: 200%;	
+	border: 1px solid black;
+}
+.firstin2text span{
+	font-size: 34px;
+	font-weight: bold;
+}
+.firstin2text p{
+	margin-bottom: 0;
+}
+
+/*#second 섹션--------------------------------------------------------*/
+#second{
+	width: 100%;
+	margin-bottom: 200px;
+}
+.secondwrap{
+	width: 90%;	
+	margin: 0 auto;
+	text-align: center;
+}
+.secondwrap p{
+	margin: 30px;
+}
+.secondinbox{
+	width: 100%;
+	display: flex;	
+}
+.blackbox{
+	width: 33%;
+	background-color: black;
+	color: white;
+	border-radius: 10px;
+	padding: 60px 20px;
+	margin: 10px;
+	text-align: center;
+/*	max-width: 400px;*/
+}
+.blackbox h3{
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.blackbox p{
+	margin: 0;
+	font-size: 12px;
+
+}
+/*#three 섹션--------------------------------------------------------*/
+#three{
+	width: 100%;	
+}
+.threewrap{
+	width: 70%;	
+	margin: 0 auto;
+	text-align: center;
+}
+.threewrap h1{
+	margin-bottom: 100px;
+}
+.threeinbox{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+.tibCard{
+	width: 33.33%;
+	max-width: 400px;
+	margin: 1%;
+}
+.tibCard img{
+	width: 192px;
+	margin-bottom: 20px;
+}
+.tibCard h5,.tibCard p, .tibCard h4{
+	padding:0 20px;
+}
+.tibCard h5{
+	margin-bottom: 20px;
+	font-size: 16px;
+	font-weight: bold;
+}
+.tibCard h4{
+	margin: 30px 0;
+	font-size: 18px;
+	font-weight: bold;
+}
+.tibCard p{
+	margin: 0;
+	font-size: 14px;
+}
+.tibCard span{
+	font-size: 14px;
+	text-align: left;
+}
+/*#fotrh 섹션--------------------------------------------------------*/
+#forth{
+	width: 100%;
+}
+.forthwrap{
+	width: 80%;
+	margin: 0 auto;
+}
+.forthtitle{
+	width: 100%;
+	text-align: center;
+	margin: 200px auto 100px;
+}
+.forthcardwrap{
+	width: 100%;
+	display: flex;
+	margin-bottom: 200px;
+}
+.forthcard{
+	width: 33.3%;
+	margin: 1%;
+}
+.forthcard h3{
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+.forthcard hr{
+	opacity: 1;
+	margin: 30px 0;
+}
+.forthcard p{
+	margin: 5px;
+	font-weight: bold;
+}
+.forthcard span{
+	margin-right: 10px;
+}
+/*#last 섹션--------------------------------------------------------*/
+#last{
+	width: 100%;
+	background-color: black;
+	padding: 50px;
+}
+.lastwrap{
+	text-align: center;
+	width: 50%;
+	color: white;
+	margin: 50px auto;
+	
+}
+.lastwrap h2{
+	margin-bottom: 50px;
+	font-weight: 900;
+	font-size: 24px;
+}
+.lastwrap button{
+	width: 190px;
+	height: 40px;
+	border: none;
+	background-color: #087eff;
+	color: white;
+	border-radius: 10px;
+	font-weight: 900;
+}
+.up{
+	background-color: gray;
+}
+.up span{
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	position: fixed;
+	font-size: 40px;
+	bottom: 20px;
+	right: 20px;
+	background-color: gray;
+	border-radius: 50%;
+	color: white;
+	cursor: pointer;
+	display: none;
+}
+/*#footer 섹션--------------------------------------------------------*/
+footer{
+	width: 100%;
+
+	
+}
+
+.footerwrap{
+	width: 90%;
+	padding: 120px 0px 50px;
+	font-size: 13px;
+	font-weight: 900;
+	color: gray;
+	margin: 0 auto;
+}
+.hidewrap{
+	background-color: black;
+	opacity: 0.5;
+	position: fixed;
+	width: 1000px;
+	height: 1000px;
+	z-index: 9;
+	top: 0;
+}
+/***************************************************/
+/******************미디어 커리***********************/
+/***************************************************/
+
+/*****************************큰모니터 크기*************/
+@media screen and (min-width:960px){
+/*헤더 데스크탑 미디어 커리 -----------------------------------------*/
+.open{
+	display: none;
+}
+.textbox{
+	display: flex;
+	width: 60%;
+	justify-content: flex-end;
+}
+
+
+}
+/*****************************작은 모니터 크기*************/
+@media screen and (min-width:768px) and (max-width:959px){
+	/*헤더 테블릿 미디어 커리 -----------------------------------------*/
+	.textbox{
+		display: none;
+	}
+	.open{
+		display: block;
+	}
+	.firstwrap{
+		display: block;
+	}
+	.firstin1,.firstin2,.hr{
+		width: 100%;
+	}
+	.threewrap{
+		width: 90%;
+	}
+	.forthwrap{
+		width: 90%;
+	}
+}
+/*****************************스마트폰 크기*************/
+@media screen and (max-width:767px){
+	/*헤더 스마트폰 미디어 커리 -----------------------------------------*/
+	.textbox{
+		display: none;
+	}
+	.open{
+		display: block;
+	}
+	
+	
+	.closeOpen{
+		width: 50%;
+		position: fixed;
+		top: 0;
+		right: 0;
+		height: 1000px;
+	}
+	.threewrap{
+		width: 90%;
+	}
+	.threeinbox{
+		width: 100%;
+		display: block;
+	}
+	.tibCard{
+		width: 100%;
+		margin: 0 auto 50px;
+	}
+	footer{
+		padding: 80px 0px 0;
+	}
+	.firstwrap,.secondinbox{
+		display: block;
+	}
+	.firstin1,.firstin2,.hr,.blackbox{
+		width: 100%;
+	}
+	.forthwrap{
+		width: 90%;
+	}
+	.forthcard{
+		width: 100%;
+		margin-bottom: 100px;
+	}
+	.forthcardwrap{
+		display: block;
+	}
+	.lastwrap{
+		width: 95%;
+	}
+}

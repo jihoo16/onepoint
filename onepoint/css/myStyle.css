@@ -1,0 +1,429 @@
+*{
+	margin: 0;
+	padding: 0;
+	/*border: 1px solid gray;*/
+	box-sizing: border-box;
+	font-family: Pretendard,Open Sans,sans-serif,FontAwesome!important;
+}
+html,body{
+	background-color: #070707;
+	color: white;
+}
+#wrapper{
+	width:100%;
+	position: relative;
+	background-color: #070707;
+}
+a{
+	text-decoration: none;
+}
+header{
+	width: 100%;
+	padding: 0px;
+	position: relative;
+}
+
+#headerdiv{
+	width: 100%;
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+
+}
+.flex{
+	height: 1080px;
+	display: flex;
+	justify-content: center;
+	position: relative;
+
+}
+#logo{
+	padding: 20px;
+	position: relative;
+	top: 10px;
+	z-index: 4;
+}
+#logo  h3 a{
+	font-size: 20px;
+}
+#logo a h1{
+	width:211px;
+	position: relative;
+	top: -20px
+}
+#logo a h1 img{
+	width:200px;
+}
+#logo a, #buttondiv a{
+	color: white;
+	text-decoration: none;
+	position: relative;
+	top: 15px;
+	margin-left: 10px;
+}
+#probtn{
+	width: 150px;
+	height: 50px;
+	border-radius: 50px;
+	border: 1px solid #fff;
+	font-size: 16px;
+	font-weight: 700;
+	background-color: #070707;
+	position: relative;
+	top: 10px;
+	color: white;
+}
+
+#loginbtn{
+	width: 100px;
+	height: 50px;
+	color: white;
+	font-size: 16px;
+	font-weight: 700;
+	border: none;
+	background-color: #070707;
+	position: relative;
+	top: 10px;
+}
+#headercenter{
+	height: 321.9px;
+	align-items: center;
+	position: relative;
+	z-index: 10;
+	margin-top: 150px;
+	text-align: center;
+	font-weight: bold;
+	line-height: 3.5em;
+}
+
+#headercenter h1{
+	display: block;
+	margin-bottom: 30px;
+}
+.buttomblue{
+	width: 200px;
+	height: 60px;
+	border-radius: 50px;
+	font-size: 18px;
+	font-weight: 700;
+	background-color: #087eff;
+	color: white;
+	border: none;
+}
+#headercenter a{
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 15px;
+	margin-top: 20px;
+	color: #ffffff;
+}
+.headerimgdd>img:nth-child(1) {
+	width: 400px;
+	left: 100px;
+	top: -100px;
+	animation: moving 20s ease-in-out infinite;
+	transform-origin: top left;
+	position: absolute;
+	z-index: 3;
+}
+@keyframes moving {
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-50px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+@keyframes movinga {
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(50px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+.headerimgdd img {
+	position: absolute;
+	transition: all 0.5s;
+}
+.headerimgdd>img:nth-child(4) {
+	width: 115px;
+	right: 250px;
+	top: 100px;
+	animation: movinga 20s ease-in-out infinite;
+}
+.headerimgdd>img:nth-child(2) {
+	width: 277px;
+	right: 0;
+	bottom: 355px;
+	animation: movinga 20s ease-in-out infinite;
+	transform-origin: top right;
+}
+.headerimgdd>img:nth-child(3) {
+	width: 98px;
+	left: 340px;
+	bottom: 350px;
+	animation: moving 20s ease-in-out infinite;
+}
+.headerimgdd .textimg img {
+	width: 815px;
+	height: 120px;
+	left: 340px;
+	bottom: 250px;
+	animation: movel 30s infinite linear;
+
+}
+.headerimgdd .textimg2 img {
+	width: 815px;
+	height: 120px;
+	left: 2000px;
+	bottom:250px;
+	animation: movel 30s infinite linear;
+	animation-delay: 15s;
+
+}
+.hamburger {
+	display: none;
+	margin-left: 15px;
+}
+
+@keyframes movel {
+	0%{left :100%;}
+	100%{left :-200%;}
+}
+/***************************************************/
+/******************미디어 커리***********************/
+/***************************************************/
+@media screen and (min-width:960px){
+
+	.hamburger {
+		display: none !important;
+		margin-left: 15px;
+	}
+	#buttondiv{
+		display:block !important;
+		position: relative;
+		z-index: 4;
+	}
+	#hambermenu{
+		display: none !important;
+	}
+}
+@media screen and (min-width:768px) and (max-width:959px){
+	.inner {
+		height: 75px;
+
+	}
+	body{
+		background-color: blue;
+	}
+	header{
+		width: 100%;
+
+		position: relative;
+	}
+	.hamburger {
+		display: none !important;
+		margin-left: 15px;
+	}
+	#buttondiv{
+		display:block !important;
+
+	}
+	#hambermenu{
+		display: none !important;
+	}
+	
+	.flex{
+		height: 712px;
+
+	}
+	.headerimgdd>img:nth-child(1){
+		width: 210px;
+		top:-120px;
+		left:-30px;
+	}
+	.headerimgdd>img:nth-child(4) {
+		width: 115px;
+		right: 40px;
+		top: 50px;
+		
+	}
+	.headerimgdd>img:nth-child(2) {
+		width: 210px;
+		right: 0;
+		bottom: 205px;
+		
+	}
+	.headerimgdd>img:nth-child(3) {
+		width: 98px;
+		left: 40px;
+		bottom: 350px;
+	
+	}
+	.headerimgdd .textimg img {
+		width: 815px;
+		height: 120px;
+		
+
+	}
+	.headerimgdd .textimg2 img {
+		width: 815px;
+		height: 120px;
+	
+
+
+	}
+}
+@media screen and (max-width:767px){
+	body{
+		width: 100%;
+		height: 100%;
+	}
+	body.hidden{
+		overflow: hidden;
+	}
+	#hambermenu{
+		width: 100%;
+		height: 1000px;
+		position: relative;
+		left: 0;
+		z-index: 9999;
+		background: black;
+	}
+	#hambermenu a h1 img{
+		width: 170px;
+	}
+	.hamburger {
+		display: block;
+		scale:0.5;
+	}
+	.close{
+		scale:0.5;
+	}
+	#buttondiv{
+		display:none;
+		width: 100%;
+	}
+
+	#logo h3{
+		display:none;
+	}
+	#logo img{
+		scale:0.7;
+		position: relative;
+		
+	}
+	#logo{
+		width: 30%;
+		padding: 0;
+	}
+	.inner {
+		padding: 0;
+
+	}
+	header {
+		width: 100%;
+		padding: 0px;
+		position: relative;
+	}
+	.flex{
+		height: 812px;
+		left: 10px;
+		position: relative;
+
+	}
+	.headerimgdd>img:nth-child(1){
+		width: 210px;
+		top:-120px;
+		left:-30px;
+	}
+	.headerimgdd>img:nth-child(4) {
+		width: 85px;
+		right: 40px;
+		top: 50px;
+		
+	}
+	.headerimgdd>img:nth-child(2) {
+		width: 210px;
+		right: 0;
+		bottom: 205px;
+		
+	}
+	.headerimgdd>img:nth-child(3) {
+		width: 85px;
+		left: 40px;
+		bottom: 350px;
+	
+	}
+	.headerimgdd .textimg img {
+		width: 529px;
+		height: 78px;
+
+	}
+	.headerimgdd .textimg2 img {
+		width: 529px;
+	height: 78px;
+	left: 200%;
+
+
+	}
+
+}
+
+#hambermenu{
+	display: none;
+	position: absolute;
+	top: 0;
+	padding: 30px;
+}
+
+#hambermenu h3{
+	width: 100%;
+}
+#hambermenu a h1{
+	text-align: left;
+	position: relative;
+	left: 0;
+}
+#hambermenu a {
+	width: 100%;
+	color: white;
+	display: block;
+	margin: 20px 10px;
+	text-align: right;
+	position: relative;
+}
+#hambermenu h3 a p{
+	font-size: 1.5em;
+	font-weight: bold;
+
+}
+#probtn1{
+	width: 150px;
+	height: 50px;
+	border-radius: 50px;
+	border: 1px solid #fff;
+	font-size: 16px;
+	font-weight: 700;
+	background-color: #070707;
+	position: relative;
+	top: 10px;
+	color: white;
+}
+.close {
+	width: 100px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	scale:0.5;
+}
+
+

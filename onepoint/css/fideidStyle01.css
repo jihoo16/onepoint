@@ -1,0 +1,184 @@
+/*폰트*/
+
+@font-face {
+	font-family: 'Pretendard-Regular';
+	src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+/*초기화*/
+
+*{
+	margin: 0;
+	padding: 0;
+	/*border: 1px solid gray;*/
+	box-sizing: border-box;
+	font-family: 'Pretendard-Regular';
+}
+html,body{
+	width: 100%;
+	height: 100%;
+/*	overflow-x: hidden;*/
+}
+a{
+	text-decoration: none;
+}
+h1{
+	font-weight: 900;
+}
+#wrapper{
+	width:100%;
+	position: relative;
+	display: flex;
+
+}
+.font24{
+	font-size: 24px;
+}
+.font20{
+	font-size: 20px;
+}
+.font42{
+	font-weight: 900;
+	font-size: 42px;
+}
+.font18{
+	font-size: 18px;
+}
+.font14{
+	font-size:14px;
+}
+.colorw{
+	color: white;
+}
+.colorp{
+	color: #087eff;
+}
+.colorb{
+	color: #0f0f0f;
+}
+.colorg{
+	color: gray;
+}
+.bgb{
+	background-color: #0f0f0f;;
+}
+.bgp{
+	background-color: #087eff;
+}
+.bgg{
+	background-color: #1C212d;
+}
+
+.active{
+	font-weight: 900;
+	border-bottom: 2px solid black;
+	margin-bottom: 20px;
+}
+.left{	
+	width: 40%;
+		background-color: #0f0f0f;
+		padding: 30px;
+}
+.left img{
+	width: 200px;
+}
+.box{
+	width: 500px;
+	height: 290px;
+	color: white;
+	font-size: 2.5vw;
+	font-weight: bold;
+}
+.flexbox{
+	display: flex;
+	flex-direction: column;
+}
+small{
+	font-size: 1.3vw;
+}
+.right{
+	width: 60%;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+}
+.formwrap{
+	width: 70%;
+	padding: 40px;
+	box-shadow: 1px 1px 10px 1px #D1D1D1;
+	border-radius: 30px;
+}
+.formwrap h2, .formwrap h4{
+	text-align: center;
+	font-weight: bold;
+}
+.formwrap h4{
+	color:#087eff;
+}
+.formwrap p{
+	text-align: center;
+}
+.formwrap input{
+	height: 60px;
+	margin-right: 20px;
+}
+.inputbox{
+	display: flex;
+	align-items: center;
+}
+.inputbox button{
+	width: 200px;
+	height: 40px;
+
+}
+.btn2{
+	width: 90%;
+	margin: 20px;
+	border-radius: 50px;
+}
+.close{
+	width: 30px;
+	position: fixed;
+	top: 10px;
+	right: 10px;
+}
+/*헤더 css*/
+
+/*네비게이션 바 css--------------------------------------------------------*/
+
+/***************************************************/
+/******************미디어 커리***********************/
+/***************************************************/
+
+/*****************************큰모니터 크기*************/
+@media screen and (min-width:960px){
+
+}
+/*****************************작은 모니터 크기*************/
+@media screen and (min-width:768px) and (max-width:959px){
+	
+	.left{
+		display: none!important;
+	}
+	.right{
+		width: 100%;
+		padding: 80px 40px;
+	}
+
+}
+/*****************************스마트폰 크기*************/
+@media screen and (max-width:767px){
+	.left{
+		display: none!important;
+	}
+	.right{
+		width: 100%;
+		padding: 80px 20px;
+	}
+	.formwrap{
+		width: 100%;
+	}
+}
