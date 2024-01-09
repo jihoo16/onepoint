@@ -46,15 +46,35 @@
 					<div class="form-row">
 						<div class="col-md-12 mb-5">
 							<label for="validationCustom01">회사명</label>
-							<input type="text" class="form-control" id="validationCustom01" value="" required placeholder="ex) 원포인트">
+							<input type="text" class="form-control" id="validationCustom01" value="" required placeholder="ex) 원포인트" name="name">
 							<div class="invalid-feedback">
 								회사명을 입력해주세요.
 							</div>
 						</div>
-						
+						<div class="col-md-12 mb-5">
+							<label for="validationCustom02">아이디</label>
+							<input type="text" class="form-control" id="validationCustom02" value="" required placeholder="아이디@onepoint.com" name="id">
+							<div class="invalid-feedback">
+								아이디를 입력해주세요.
+							</div>
+						</div>
+							<div class="col-md-12 mb-5">
+							<label for="validationCustom06">비밀번호</label>
+							<input type="text" class="form-control" id="validationCustom06" value="" required placeholder="비밀번호" name="pw">
+							<div class="invalid-feedback">
+								비밀번호
+							</div>
+						</div>
+						<div class="col-md-12 mb-5">
+							<label for="validationCustom05">전화번호</label>
+							<input type="text" class="form-control" id="validationCustom05" value="" required placeholder="전화번호" name="phone">
+							<div class="invalid-feedback">
+								전화번호
+							</div>
+						</div>
 						<div class="col-md-12 mb-5">
 							<label for="validationCustom04">산업군</label>
-							<select class="custom-select" id="validationCustom04" required>
+							<select class="custom-select" id="validationCustom04" required name="category">
 								<option selected value="">...</option>
 								<option>게임</option>
 								<option>광고/마케팅</option>
@@ -87,15 +107,9 @@
 						</div>
 					</div>
 					<div class="form-row">
-						<div class="col-md-12 mb-5">
-							<label for="validationCustom03">기업규모</label>
-							<input type="text" class="form-control" id="validationCustom03" required>
-							<div class="invalid-feedback">
-								필수값입니다.
-							</div>
-						</div>
 						
-						<button class="btn btn-primary" type="submit">신청서 작성하기 →</button>
+						
+						<button class="btn btn-primary" type="submit">회원가입하기 →</button>
 					</form>
 
 					<script>
