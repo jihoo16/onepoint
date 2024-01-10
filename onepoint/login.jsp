@@ -31,7 +31,7 @@
 			<div class="formwrap">
 
 				<form class="needs-validation" novalidate
-					action="processloginMember.jsp" method="post">
+					action="./MemberController.do" method="post">
 					<h2>고객사 로그인</h2>
 					<div class="form-row p-0">
 
@@ -42,7 +42,7 @@
 							<div class="invalid-feedback">이메일을 입력해 주세요.</div>
 						</div>
 						<div class="col-12 mb-3 p-0">
-							<label for="pw"></label> <input type="text" class="form-control"
+							<label for="pw"></label> <input type="password" class="form-control"
 								id="pw" value="" name="pw" required placeholder="비밀번호">
 							<div class="invalid-feedback">비밀번호를 입력해주세요</div>
 						</div>
@@ -62,7 +62,7 @@
 					<button class="btn btn-primary" type="submit">로그인 하기</button>
 
 					<div class="abox2">
-						<a href="application.html">처음이라면? <span>신청하고 가입하기</span></a>
+						<a href="addMember.jsp">처음이라면? <span>신청하고 가입하기</span></a>
 					</div>
 				</form>
 				<a href="index.jsp"><img src="img/close_pro.png" alt=""

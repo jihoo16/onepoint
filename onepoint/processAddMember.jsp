@@ -7,7 +7,9 @@
 request.setCharacterEncoding("utf-8");
 String id = request.getParameter("id");
 String pw = request.getParameter("pw");
-
+String name = request.getParameter("name");
+String category = request.getParameter("category");
+String phone = request.getParameter("phone");
 %>
 
 <sql:setDataSource var="dataSource"
@@ -16,21 +18,17 @@ String pw = request.getParameter("pw");
 	password="m1234" />
 
 
-<sql:query dataSource="${ dataSource}" var="rs">
-		select * from onepoint where id=? and pw= ?
+<sql:update dataSource="${ dataSource}" var="rs">
+		insert into onepoint values(?,?,?,?,?,sysdate,sysdate)
 		<sql:param value="<%=id%>" />
 	<sql:param value="<%=pw%>" />
-
-</sql:query>
-
-<c:forEach var="row" items="${rs.rows}">
-	<%
-	 session.setAttribute("sessionId",id);
-	%>
-	<c:redirect url="resultMember.jsp?msg=2"/>
-</c:forEach>
+	<sql:param value="<%=phone%>" />
+	<sql:param value="<%=name%>" />
+	<sql:param value="<%=category%>" />
+	
+</sql:update>
 
 
-	<c:redirect url="login.jsp?error=1"/>
-
-
+<c:if test = "${rs>=1}">
+	<c:redirect url="resultMember.jsp?msg=1"/>
+</c:if>

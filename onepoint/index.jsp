@@ -56,9 +56,9 @@ String sessionId = (String) session.getAttribute("sessionId");
 				<div id="buttondiv">
 					<a href="blog.html"><button class="probtn">Blog</button></a>
 					<a href="we.html"><button class="probtn">We're Hiring</button></a>
-					<a href="application.html"><button class="probtn">마케터 고용</button></a>
 					<c:choose>
 					<c:when test="${empty sessionId}">
+					<a href="addMember.jsp"><button class="probtn">회원 가입</button></a>
 					<a href="login.jsp"><button id="loginbtn">로그인하기</button></a>
 					 </c:when>
 					 <c:otherwise>
@@ -87,13 +87,13 @@ String sessionId = (String) session.getAttribute("sessionId");
 				</div>
 				<h3><a href="blog.html"><p>Blog</p></a>
 					<a href="we.html"><p>We're Hiring</p></a>
-					<a href="application.html"><p>Marketer</p></a>
 					<c:choose>
 					<c:when test="${empty sessionId}">
-					<a href="login.jsp"><button id="loginbtn1" class="buttomblue">로그인하기</button></a>
+					<a href="addMember.jsp"><p>회원가입</p></a>
+					<a href="login.jsp"><button id="loginbtn1" class="buttomblue ">로그인하기</button></a>
 					 </c:when>
 					 <c:otherwise>
-					 <a href=""style="cursor: auto;"><p>[<%= sessionId %>] 님 로그인중</p></a>
+					 <a href=""style="cursor: auto;"><p style="font-size: 18px">[<%= sessionId %>] 님 로그인중</p></a>
 					 <a href='<c:url value = "logoutMember.jsp"/>'><p>로그아웃</p></a>
 				</c:otherwise>
 				</c:choose>
@@ -125,7 +125,7 @@ String sessionId = (String) session.getAttribute("sessionId");
 				<div id="headercenter" >
 					<span>탑티어 프리랜서 마케터 매칭 서비스</span>
 					<h1>상위 10% 마케터를<br>필요한 만큼 고용하세요</h1>
-					<button class="buttomblue"><a href="application.html">지금 바로 고용하기</a></button><br>
+					<button class="buttomblue"><a href="addMember.jsp">지금 바로 고용하기</a></button><br>
 					<p>서비스 소개서가 필요하신가요?</p>
 				</div>
 			</div>

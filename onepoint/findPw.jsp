@@ -14,7 +14,18 @@
 	<link rel="icon" href="img/m_h1_logo.png">
 	
 	<script src="js/loginScript01.js"></script>
-
+<script>
+	function checkForm(){
+		if(!document.findOut.phone.value){
+			alert("전화번호를 입력하세요");
+			return false;
+		}
+		if(!document.findOut.id.value){
+			alert("아이디를 입력하세요");
+			return false;
+		}
+	}
+</script>
 </head>
 <body>
 	<div id="wrapper">
@@ -31,7 +42,7 @@
 					<h4>ONE POINT</h4>
 					<h2>고객사 비밀번호 찾기</h2>
 					<p>가입하신 이메일을 입력해주세요</p>
-					<form action="findPwOut.jsp" class="needs-validation" novalidate>
+					<form name="findOut"action="findPwOut.jsp" class="needs-validation" novalidate onsubmit="return checkForm()" method="post">
 						<div class="inputbox">
 							<label for="validationTooltip01">
 								
@@ -39,7 +50,22 @@
 							<input type="text" class="form-control" id="validationTooltip01" value="" required placeholder="이메일" name="id">
 							
 							</div>
-						<button class="btn btn-primary btn2" type="submit">비밀번호 재설정하기</button>
+								<div class="inputbox">
+							<label for="validationTooltip01">
+								
+							</label>
+							<input type="text" class="form-control my-3" id="validationTooltip01" value="" required placeholder="전화번호" name="phone">
+							
+							</div>
+								<%
+    String error = request.getParameter("error");
+   	if(error !=null){
+   		out.println("<div class='alert alert-danger'>");
+   		out.println("이메일과 전화번호를 확인해주세요.");
+   		out.println("</div>");
+   	}
+   %>
+						<button class="btn btn-primary btn2" type="submit">비밀번호 찾기</button>
 						</form>
 					
 				</div>

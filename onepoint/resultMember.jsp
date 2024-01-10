@@ -35,9 +35,10 @@
 					if (msg != null) {
 						if (msg.equals("0"))
 							out.print("<h2 class='alert alert-primary text-center'>회원 정보가 수정되었습니다.</h2>");
-						else if (msg.equals("1"))
+						else if (msg.equals("1")){
 							out.print("<h2 class='alert alert-info text-center'>회원 가입을 축하드립니다. 다시 로그인 해주세요</h2>");
-						else if (msg.equals("2")) {
+						out.println("<a href='login.jsp'><button class='btn btn-success'>로그인 하러가기 돌아가기</button></a>");
+						}else if (msg.equals("2")) {
 							String loginId = (String) session.getAttribute("sessionId");
 							
 							out.print("<h2 class='alert text-center'>" + loginId + "님 환영합니다.</h2>");

@@ -27,7 +27,6 @@
 <%
 request.setCharacterEncoding("utf-8");
 String phone = request.getParameter("phone");
-
 %>
 <sql:setDataSource var="dataSource"
 	driver="oracle.jdbc.driver.OracleDriver"
@@ -38,8 +37,8 @@ String phone = request.getParameter("phone");
 <sql:query dataSource="${ dataSource}" var="rs">
 		select id from onepoint where phone =?
 		<sql:param value="<%=phone%>" />
-
 </sql:query>
+
 	<div id="wrapper">
 		<div class="left">
 			<a href="index.jsp"><img src="img/h-logo.png" alt=""></a>
@@ -56,7 +55,12 @@ String phone = request.getParameter("phone");
 			<div class="formwrap">
 				<h4>ONE POINT</h4>
 				<h2>고객사 아이디 찾기</h2>
-				
+	<c:choose>
+	<c:when test="${empty rs.rows}">
+        <%-- No results found, redirect to findId.jsp with error parameter --%>
+        <c:redirect url="findId.jsp?error=1"/>
+    </c:when>
+      <c:otherwise>
 				<div class="container-fluid table-responsive mx-0">
 			<table class="table table-striped text-center">
 				<tr class="table-active">
@@ -65,6 +69,7 @@ String phone = request.getParameter("phone");
 					</c:forEach>
 				</tr>
 				<c:forEach var="row" items="${rs.rowsByIndex}">
+				
 					<tr>
 						<c:forEach var="column" items="${row}">
 							<td>
@@ -73,13 +78,19 @@ String phone = request.getParameter("phone");
 							</c:if>
 							<c:if test="${column ==null }">
 							<mark>데이터 없음</mark>
+							
 							</c:if>
+							
+		
+
 							</td>
 						</c:forEach>
 					</tr>
 				</c:forEach>
 			</table>
 		</div>
+		 </c:otherwise>
+		</c:choose>
 				<a href="login.jsp"><img src="img/close_pro.png" alt=""
 					class="close"></a>
 			</div>
