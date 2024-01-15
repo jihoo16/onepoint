@@ -89,5 +89,6 @@ $(function(){
 		insightsbtn.removeClass('colorg');
 		homebtn.removeClass('colorg');
 	})
+	AOS.init();
 
 });
