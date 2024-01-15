@@ -1,23 +1,23 @@
 [
-{
-"id":1,
-"name":"김태리",
-"age":24,
-"personalColor":"blue"
-},
-{"id":2,
-"name":"김희애",
-"age":40,
-"personalColor":"brown"
-},
-{"id":3,
-"name":"한가인",
-"age":30,
-"personalColor":"pink"
-},
-{"id":4,
-"name":"송혜교",
-"age":35,
-"personalColor":"purple"
-}
+  {
+  "id":1,
+  "name":"김태리",
+  "age":24,
+  "personalColor":"blue"
+  },
+  {"id":2,
+  "name":"김희애",
+  "age":40,
+  "personalColor":"brown"
+  },
+  {"id":3,
+  "name":"한가인",
+  "age":30,
+  "personalColor":"pink"
+  },
+  {"id":4,
+  "name":"송혜교",
+  "age":35,
+  "personalColor":"purple"
+  }
 ]
