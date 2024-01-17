@@ -1,0 +1,23 @@
+[
+  {
+  "id":1,
+  "firstname":"태리",
+  "lastname":"김",
+  "age":24
+  },
+  {"id":2,
+  "firstname":"보영",
+  "lastname":"박",
+  "age":30
+  },
+  {"id":3,
+  "firstname":"지현",
+  "lastname":"전",
+  "age":35
+  },
+  {"id":4,
+ "firstname":"혜교",
+  "lastname":"송",
+  "age":36
+  }
+]
