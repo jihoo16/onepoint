@@ -323,8 +323,9 @@ $(function(){
 	hidebox.click(function(event) {
 		vp.hide();
 		hidebox.hide();
-		video[0].pause();
 		vp[0].pause();
+		video[0].pause();
+		
 		video.hide();
 		
 	});
