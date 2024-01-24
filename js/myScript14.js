@@ -80,6 +80,18 @@ $(function(){
 		more.hide();
 	});
 
+	//세번째 섹션 케로셀 스크립트
+	new Carousel(document.getElementById("myCarousel"), {
+		Autoplay : {
+			progressParentEl : (autoplay) => {
+				return autoplay.instance.viewport;
+			}
+		}
+	}, {
+		Autoplay
+	});
+
+
 	//네번째 섹션에 동영상 스크립트
 	forthimg.click(function(){
 		var videoUrl = $(this).data('video');
@@ -110,7 +122,7 @@ $(function(){
 		}
 		const step = (timestamp) => {
 			if (!startTimestamp) startTimestamp = timestamp;
-			 progress = Math.min((timestamp - startTimestamp) / duration, 1);
+			progress = Math.min((timestamp - startTimestamp) / duration, 1);
 			obj.textContent  = Math.floor(progress * (end - start) + start);
 			if (progress < 1) {
 				window.requestAnimationFrame(step);
@@ -118,6 +130,7 @@ $(function(){
 		};
 		window.requestAnimationFrame(step);
 	}
+	
 	//다섯 번째 섹션에 숫자 카운트 되는 스크립트2 2번 메뉴 클릭시 오류가 생겨서 수정하여 따로 사용
 	function animateValue2(obj, start, end, duration,delay) {
 		
@@ -126,7 +139,7 @@ $(function(){
 		}
 		const step = (timestamp) => {
 			if (!startTimestamp) startTimestamp = timestamp;
-			 progress = Math.min((timestamp - startTimestamp+1000) / duration, 1);
+			progress = Math.min((timestamp - startTimestamp+1000) / duration, 1);
 			obj.textContent  = Math.floor(progress * (end - start) + start);
 			if (progress < 1) {
 				window.requestAnimationFrame(step);
@@ -329,13 +342,31 @@ $(function(){
 		video.hide();
 		
 	});
-		$(window).scroll(function(){
-        // 스크롤이 페이지 하단에 도달하면
+	$(window).scroll(function(){
+        // 스크롤이 2000px만큼 하강시 사라지는 코드
 		if ($(this).scrollTop() > 2000) {
 			$(".videobtn").fadeOut();
 		} else {
 			$(".videobtn").fadeIn();
 		}
+	});
+
+	$('#scrollButton').hide();
+
+
+    /* 스크롤 버튼 스크립트*/
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 500) {
+			$('#scrollButton').fadeIn();
+		} else {
+			$('#scrollButton').fadeOut();
+		}
+	});
+
+    /* 스크롤 버튼 스크립트*/
+	$('#scrollButton').click(function () {
+		$('html, body').animate({ scrollTop: 0 }, 800);
+		return false;
 	});
 
 

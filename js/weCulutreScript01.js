@@ -23,7 +23,6 @@ $(function(){
 	})
 	AOS.init();
 	var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
-	// alert(scrollBottom);
 	$(window).scroll(function(){
         // 스크롤이 페이지 하단에 도달하면
 		if ($(this).scrollTop() > 3513) {

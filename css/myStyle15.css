@@ -7,8 +7,7 @@
 	font-style: normal;
 }
 
-/*초기화*/
-
+/*초기화 및 기초 설정*/
 *{
 	margin: 0;
 	padding: 0;
@@ -21,7 +20,6 @@ html,body{
 	color: white;
 	width: 100%;
 	height: 100%;
-/*	overflow-x: hidden;*/
 }
 a{
 	text-decoration: none;
@@ -72,15 +70,17 @@ h1{
 .bgg{
 	background-color: #1C212d;
 }
-/*헤더 css*/
-
+.white{
+	color: white;
+}
+/*----------- header css-------------*/
 header{
 	width: 100%;
 	padding: 0px;
 	position: relative;
 	overflow: hidden;
 }
-
+/*----------- 네비게이션 css-------------*/
 #headerdiv{
 	width: 98%;
 	height: 100px;
@@ -96,7 +96,6 @@ header{
 	display: flex;
 	justify-content: center;
 	position: relative;
-/*	overflow: hidden;*/
 }
 #logo{
 	padding: 20px;
@@ -126,14 +125,12 @@ header{
 	position: relative;
 	top: 0px;
 	margin-left: 10px;
-
 }
 #buttondiv a button:hover{
 	scale: 1.2;
 	transition: all	1s;
 	animation: ll 1s ;
 }
-
 @keyframes ll{
 	0%,100%{
 		opacity: 0;
@@ -161,7 +158,6 @@ header{
 	text-align: right;
 	margin-left: 10px;
 }
-
 #loginbtn{
 	width: 100px;
 	height: 50px;
@@ -212,7 +208,7 @@ header{
 }
 
 
-/*헤더 이미지 ******************************************/
+/*----------- header 이미지 css-------------*/
 
 .headerimgdd>img:nth-child(1) {
 	width: 400px;
@@ -287,6 +283,8 @@ header{
 	animation-delay: 15s;
 
 }
+
+/*----------- hamburger 메뉴 css-------------*/
 .hamburger {
 	display: none;
 	margin-left: 15px;
@@ -299,8 +297,6 @@ header{
 	0%{left :100%;}
 	100%{left :-200%;}
 }
-
-
 #hambermenu{
 	display: none;
 	position: absolute;
@@ -329,18 +325,6 @@ header{
 	font-weight: bold;
 
 }
-#probtn1{
-	width: 150px;
-	height: 50px;
-	border-radius: 50px;
-	border: 1px solid #fff;
-	font-size: 16px;
-	font-weight: 700;
-	background-color: #070707;
-	position: relative;
-	top: 10px;
-	color: white;
-}
 .close {
 	width: 100px;
 	position: relative;
@@ -351,7 +335,7 @@ header{
 }
 
 
-/*첫번째 섹션*/
+/*----------- 첫번째 섹션 #topPro css-------------*/
 
 #topPro{
 	width: 100%;
@@ -384,13 +368,7 @@ header{
 #topPro h3 span.marketing{
 	margin: 0 2% 0 10%;
 }
-.white{
-	color: white;
-}
-#topPro h3 span.bg-secondary{
-	background: #087EFF;
-}
-.bg-secondary {
+#topPro h3 span.badge{
 	--bs-bg-opacity: 1;
 	background: #087EFF !important;
 	border-radius: 50px;
@@ -398,8 +376,8 @@ header{
 	position: relative;
 	left: -19px;
 	top: -40px;
-
 }
+/*----------- 버튼 css -------------*/
 #topPro #blueborderbox_wrap, #topPro #hd_blueborderbox_wrap, #topPro #mb_blueborderbox_wrap{
 	max-width: 1200px;
 	width: 100%;
@@ -427,13 +405,13 @@ header{
 	display: flex;
 	justify-content: center;
 	cursor: pointer;
-	
 }
 
 #topPro #mb_blueborderbox_wrap div.hide{
 	display:none;
 }
-/*두번재 섹션 #imgani*/
+
+/*----------- 두번째 섹션 #imgani css-------------*/
 #imgani{
 	width: 100%;
 	margin-top: 200px;
@@ -450,24 +428,16 @@ header{
 	display: flex;
 	align-items: center;
 	white-space: nowrap;
-/*	overflow-x: hidden;*/
-position: relative;
+	position: relative;
 }
 
 #imgani .imganiimg, #imgani .imganiimg3{
-/*	width: 2200px;*/
-position: relative;
-/*	left: 100%;*/
-animation: movezero 30s infinite linear;
-
+	position: relative;
+	animation: movezero 30s infinite linear;
 }
 #imgani .imganiimg2,#imgani .imganiimg4{
 }
-/*#imgani .imgani img3,#imgani .imganiimg4{
-width: 2200p;*/
-	/*position: relative;
-animation: movezero2 30s infinite linear;
-}*/
+
 #imgani .imganiimg2, #imgani .imganiimg4{
 	animation: movezero2 30s infinite linear;	
 }
@@ -495,33 +465,31 @@ animation: movezero2 30s infinite linear;
 	background-color: white;
 	color: black;
 }
-/*#세번째 섹션 #hard*/
+
+/*----------- 세번째 섹션 .hidehardwrap css-------------*/
 .hidehardwrap{
 	width: 100%;
 	overflow-x: hidden;
 }
 #hard {
 	width: 100%;
-/*	height: 500px;		*/
-margin-top: 300px;
-margin-left: 20%;
-margin-bottom: 200px;
-position: relative;
-display: flex;
-overflow-x: hidden;
+	margin-top: 300px;
+	margin-left: 20%;
+	margin-bottom: 200px;
+	position: relative;
+	display: flex;
+	overflow-x: hidden;
 }
 #hardwrap{
 	width: 100%;
 	position: relative;
 	display: flex;
 	flex-wrap: nowrap;
-
 }
 #hard #hardleft{
 	width: 350px;
 	min-width: 350px;
 	color: gray;
-
 }
 #hard #hardleft span{
 	font-weight: bold;
@@ -529,7 +497,6 @@ overflow-x: hidden;
 	margin-bottom: 30px;
 	display: inline-block;
 }
-
 #hard #hardleft h2 ,#hard #hardleft h2 span,#hard #hardleft h2 p{
 	font-size: 42px;
 	font-weight: bold;
@@ -547,16 +514,15 @@ overflow-x: hidden;
 .blue{
 	color: #087EFF;
 }
+/*----------- 캐로셀 부분 -------------*/
 .hardaniwrap {
 	width: 100%;
 	display: flex;
 	align-items: start;
 	white-space: wrap;
-/*	overflow: hidden ;*/
-position: relative;
+	position: relative;
 }
-
-#hardani, #hardani2{
+#hardani{
 	width:43%;
 	display: flex;
 	position: relative;
@@ -569,13 +535,10 @@ position: relative;
 	--f-carousel-spacing: 10px;
 	--f-carousel-slide-width: 60%;
 	width: 100%;
-	
 }
-
 #myCarousel .f-carousel__slide {
 	padding: 10px;
 	background: rgba(0, 0, 0, 0.0);
-
 }
 .f-carousel__dots li button{
 	color: white;
@@ -583,39 +546,27 @@ position: relative;
 .f-carousel {
 	--f-button-width: 38px;
 	--f-button-height: 38px;
-
 	--f-button-svg-width: 16px;
 	--f-button-svg-height: 16px;
 	--f-button-svg-stroke-width: 2.5;
-
 	--f-button-color: rgb(71 85 105);
 	--f-button-border-radius: 50%;
 	--f-button-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%), 0 3px 7px -3px rgb(0 0
 		0 / 30%);
-
 	--f-button-bg: #fff;
 	--f-button-hover-bg: #f9f9f9;
 	--f-button-active-bg: #f0f0f0;
 }
-#hardani3, #hardani4{
-	width: 200%;
-	display: flex;
-	align-items: start;
-	position: relative;
-	top: 0px;
-	animation: movecard 20s infinite linear;
-	display: none;
-}
 
-#hard .card-header,#hardani3 .card-header ,#hardani4 .card-header{	
+#hard .card-header{	
 	font-size: 32px;
 	font-weight: bold;
 	position: relative;
 }
-#hard .card-header p, #hardani3 .card-header p, #hardani4 .card-header p{
+#hard .card-header p{
 	font-size: 16px;
 }
-#hard img,#hardani3 img,#hardani4 img{
+#hard img{
 	width: 120px;
 	height: 190px;
 	position: absolute;
@@ -626,50 +577,15 @@ position: relative;
 	width: 100%;
 	margin-left: 1%;
 	border-radius: 15px ;
-/*	display: flex;*/
-
-
-}
-#hardani2 .text-bg-primary{
-	width: 100%;
-	margin-left: 1%;
-/*	display: flex;*/
-border-radius: 15px ;}
-#hardani3 .text-bg-primary,#hardani4 .text-bg-primary{
-	width: 100%;
-	margin-left: 1%;
-/*	display: flex;*/
-border-radius: 15px ;
-background-color: red;
 }
 
-/*@keyframes movecard{
 
-	0%{
-		transform: translateX(0%);	
-	}
-	10%{transform: translateX(-20%);}
-	20%{transform: translateX(-20%);}
-	30%{transform: translateX(-40%);}
-	40%{transform: translateX(-40%);}
-	50%{transform: translateX(-60%);}
-	60%{transform: translateX(-60%);}
-	70%{transform: translateX(-80%);}
-	80%{transform: translateX(-80%);}
-	90%{
-		transform: translateX(-100%);
-	}
-	100%{
-		transform: translateX(-100%);
-	}
-}*/
-
-#hard .card .card-body,#hardani3 .card .card-body,#hardani4 .card .card-body{
+#hard .card .card-body{
 	border-radius: 0px 0px 15px 15px;
 	height: 350px;
 
 }
-#hard .card .card-body p,#hardani3 .card .card-body p,#hardani4 .card .card-body p{
+#hard .card .card-body p{
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
@@ -678,18 +594,7 @@ background-color: red;
 	width: 100%;
 }
 
-
-
-.bo{
-	border:1px solid red;
-}
-
-
-
-
-
-
-/*네번째 섹션 #forth******************************/
+/*----------- 네번째 섹션 #forth css-------------*/
 #forth{
 	margin-top: 200px;
 	width: 100%;
@@ -717,7 +622,7 @@ background-color: red;
 	transform: translate(-50%, -50%);
 	z-index: 9999;
 	opacity: 1!important;
-	height:80%;
+	height:65%;
 
 }
 #hidebox{
@@ -732,7 +637,11 @@ background-color: red;
 	cursor: pointer;
 }
 
-/*다섯번째 섹션*********************************/
+/*----------- 다섯번째 섹션 #five css-------------*/
+#five{
+	height: 800px;
+	margin-bottom: 300px;
+}
 .fivewrap{
 	width: 80%;
 	margin: 0 auto;
@@ -756,8 +665,7 @@ background-color: red;
 	float: left;
 	font-size: 40px;
 	font-weight: bold;
-/*	border: 1px solid blue;*/
-margin-right: 5%;
+	margin-right: 5%;
 }
 .fivesecond span{
 	color: gray;
@@ -774,17 +682,13 @@ margin-right: 5%;
 	border-bottom: 1px solid white;
 	cursor: pointer;
 }
+/*----------- 다섯번째 섹션 첫번째 애니메이션 부분 -------------*/
 .fivethirdwrap{
-/*	width: 60%;*/
-/*	border: 1px solid red;*/
-display: flex;
-background-color: #1b212d;
-border-radius: 50px;
-padding: 50px;
-
+	display: flex;
+	background-color: #1b212d;
+	border-radius: 50px;
+	padding: 50px;
 }
-
-
 .fivethird{
 	width: 120%;
 	height: 100%;
@@ -804,7 +708,6 @@ padding: 50px;
 	animation-delay: 2.5s;
 	transform:scale(0.9);
 }
-
 @keyframes wow{
 	0%{
 		transform:scale(0.9);
@@ -817,14 +720,14 @@ padding: 50px;
 .fivethirdoneitem{
 	width: 100%;
 	position: relative;
-/*	border: 1px solid yellow;*/
-box-sizing: border-box;
-margin: 10px auto;
+	box-sizing: border-box;
+	margin: 10px auto;
 
 }
 .fll{
 	float: left;	
 }
+/*----------- 다섯번째 섹션 두번째 애니메이션 부분 -------------*/
 .imgsize2{
 	width: 15%;
 	margin: 1%;
@@ -841,7 +744,6 @@ margin: 10px auto;
 }
 .fivethirdoneitem div{
 	width: 30%;
-/*	border: 1px solid gray;*/
 }
 .protext{
 	position: relative;
@@ -862,6 +764,7 @@ margin: 10px auto;
 .fivethirdone{
 	position: relative;
 }
+/*----------- 다섯번째 섹션 세번째 애니메이션 부분 -------------*/
 .flr{
 	float: right;
 
@@ -923,19 +826,15 @@ display: inline-block;
 padding: 5px 10px;
 
 }
-#five{
-	height: 800px;
-	margin-bottom: 300px;
-}
-/*#6번째 섹션**********************/
+
+/*----------- 여섯번째 섹션 #six css-------------*/
 #six{
 	padding-top: 100px;
 	width: 100%;
 	background: linear-gradient(#070707, #2b7ee8);
-/*	overflow: hidden;*/
-height: 1300px;
-position: relative;
-margin-bottom: 300px;
+	height: 1300px;
+	position: relative;
+	margin-bottom: 300px;
 }
 .siximg1{
 	width: 400px;
@@ -994,7 +893,7 @@ top: 100px;
 .sixin2cardspan{
 	font-size: 16px;
 }
-/*best Practice********************************************/
+/*----------- 일곱번째 섹션 #seven css-------------*/
 #seven{
 	margin-bottom: 300px;
 }
@@ -1107,7 +1006,8 @@ top: 100px;
 	left: 50%;
 	margin-left: -5px;
 }
-/**************pal 8번째 섹션*************************/
+
+/*----------- 여덟번째 섹션 #pal css-------------*/
 #pal{
 	width: 100%;
 	margin-bottom: 300px;
@@ -1125,13 +1025,10 @@ top: 100px;
 	padding: 20px 50px;
 	border-top: 1px solid gray;
 	border-bottom: 1px solid gray;
-
 }
 .palqna{
 	width: 100%;
 	display: flex;
-	
-
 }
 .palQimgbox .rotate{
 	transform: rotate(180deg);
@@ -1165,7 +1062,6 @@ top: 100px;
 	line-height:1.2;
 	padding-top: 30px;
 }
-
 .palQimgbox{
 	
 	height: 100px;
@@ -1181,13 +1077,13 @@ top: 100px;
 .palqna:nth-of-type(2){
 	width: 100%;
 	background-color: #1c212d;
-/*	display: none;*/
+
 }
 .palqnawrap:nth-of-type(even){
 	background-color: #1c212d;
 }
-/**********************footer********************/
 
+/*----------- footer css-------------*/
 footer{
 	width: 90%;
 	margin: 0 auto;	
@@ -1228,6 +1124,7 @@ footer{
 	color: gray;
 	font-size: 12px;
 }
+/*----------- 추가된 비디오 css-------------*/
 .videobtn{
 	width: 180px;
 	position: fixed;
@@ -1253,37 +1150,50 @@ footer{
 	margin-left: -500px;
 
 }
+#scrollButton{
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	border: none;
+	cursor: pointer;
+	background-color: lightgray;
+	border-radius: 50%;
+}
+#scrollButton:hover{
+	background-color: white;
+	border-radius: 5px;
+}
 /***************************************************/
 /******************미디어 커리***********************/
 /***************************************************/
 /*****************************큰모니터 크기*************/
 @media screen and (min-width:960px){
 
+	/* 햄버거 메뉴  */
 	.hamburger {
 		display: none !important;
 		margin-left: 15px;
 	}
+	#hambermenu{
+		display: none !important;
+	}
+	/* 네비게이션 메뉴  */
 	#buttondiv{
 		display:block !important;
 		position: relative;
 		z-index: 4;
 	}
-	#hambermenu{
-		display: none !important;
-	}
-	#pl{
-		display: none;
-	}
-	.bar2{
-		display: none;
-	}
 	
 }
 /*****************************작은 모니터 크기*************/
 @media screen and (min-width:768px) and (max-width:959px){
-	.inner {
-		height: 75px;
-	}
+	
+
+	/* 헤더부분  */
+
+
 	#logo {
 		width: 30%;
 		padding: 0;
@@ -1305,10 +1215,13 @@ footer{
 	#hambermenu{
 		display: none !important;
 	}
-	
+
+
+	/* 헤더 이미지 부분  */
+
+
 	.flex{
 		height: 712px;
-
 	}
 	.headerimgdd>img:nth-child(1){
 		width: 210px;
@@ -1351,6 +1264,14 @@ footer{
 		top: 10px;
 		right: 5px;
 	}
+	#logo h3 a{
+		font-size: 20px;
+		margin: 0;
+	}
+
+	/* 첫번째 섹션  */
+
+
 	#topPro h2{
 		width: 90%;
 		margin: 0 auto;
@@ -1359,6 +1280,11 @@ footer{
 		display: block;
 		width: 100%;
 	}
+
+
+	/* 두번째 섹션  */
+
+
 	#imganitext{
 		width: 600px;
 		margin: 0 auto;
@@ -1366,6 +1292,11 @@ footer{
 	#imganitext span:nth-of-type(3){
 		display: inline-block;
 	}
+
+
+	/* 세번째 섹션  */
+
+
 	#hard{
 		margin-left: 5%;
 	}
@@ -1375,6 +1306,22 @@ footer{
 	#hard #hardleft h2{
 		margin-bottom: 30px;
 	}
+	#hardwrap{
+		flex-direction: column;
+	}
+
+
+	/* 네번째 섹션  */
+
+
+	.videocon{
+		height: 50%;
+	}
+
+
+	/* 다섯번째 섹션  */
+
+
 	.fivesecond{
 		width: 100%;
 		font-size: 3vw;
@@ -1418,9 +1365,11 @@ footer{
 	.protext span{
 		display: block;
 	}
-	#pl{
-		margin-top: -300px;
-	}
+
+
+	/* 여섯번째 섹션  */
+
+
 	.siximg2{
 		top: 150px;
 		left: 0px;
@@ -1437,12 +1386,11 @@ footer{
 	#six{
 		height: 1200px;
 	}
-	.sixin2{
 
-	}
-	.videocon{
-		height: 50%;
-	}
+
+	/* 일곱번째 섹션  */
+
+
 	.sevenwrap{
 		width: 90%;	
 	}
@@ -1455,6 +1403,11 @@ footer{
 		position: relative;
 		left: 10px;
 	}
+
+
+	/* footer  */
+
+
 	.footerwrap{
 		display: block;
 
@@ -1473,19 +1426,20 @@ footer{
 	.footerwrap{
 		padding-bottom: 0;
 	}
-	#logo h3 a{
-		font-size: 20px;
-		margin: 0;
-	}
-	#hardwrap{
-		flex-direction: column;
-	}
+	
+
+	/* 배너 영상  */
+
+
 	#video-player{
 		margin-left: -50%;
 	}
 }
 /*****************************스마트폰 크기*************/
 @media screen and (max-width:767px){
+
+	/* body css */
+
 	body{
 		width: 100%;
 		height: 100%;
@@ -1493,6 +1447,10 @@ footer{
 	body.hidden{
 		overflow: hidden;
 	}
+
+	/* header css */
+
+
 	#hambermenu{
 		width: 100%;
 		height: 1500px;
@@ -1518,7 +1476,6 @@ footer{
 		display:none;
 		width: 90%;
 	}
-
 	#logo h3{
 		display:none;
 	}
@@ -1547,6 +1504,11 @@ footer{
 		position: relative;
 
 	}
+
+
+	/* header 이미지 css */
+
+
 	.headerimgdd>img:nth-child(1){
 		width: 210px;
 		top:-100px;
@@ -1588,6 +1550,11 @@ footer{
 		top: 0px;
 		right: 0px;
 	}
+
+
+	/* 첫번째 섹션 #topPro css */
+
+
 	#topPro #blueborderbox_wrap{
 		display: none !important;
 	}
@@ -1597,6 +1564,7 @@ footer{
 	#topPro h2{
 		width: 90%;
 		margin: 0 auto;
+		font-size: 32px;
 	}
 	#topPro h2 span:nth-of-type(2){
 		margin-bottom: 50px;
@@ -1606,6 +1574,11 @@ footer{
 		width: 220px;
 		margin: 0 auto 100px;
 	}
+
+
+	/* 두번째 섹션 #imgani css */
+
+
 	#imganitext{
 		width: 400px;
 		margin: 0 auto;
@@ -1613,6 +1586,11 @@ footer{
 	#imganitext span:nth-of-type(3){
 		display: inline-block;
 	}
+
+
+	/* 세번째 섹션 .hidehardwrap css */
+
+
 	#hard{
 		margin-left: 5%;
 	}
@@ -1636,13 +1614,23 @@ footer{
 	#hard #hardleft h2, #hard #hardleft h2 span{
 		display: inline;
 	}
+
+
+	/* 네번째 섹션 #forth css */
 	
+
 	#forth img{
 		width: 430px;
 		height: 304px;
 		margin: 0 auto;
-
 	}
+	.videocon{
+		height: 50%;
+	}
+
+	/* 다섯번째 섹션 #five css */
+
+
 	.fivesecond{
 		width: 100%;
 		font-size: 2.8vw;
@@ -1694,6 +1682,11 @@ footer{
 	#five{
 		height: 600px;
 	}
+
+
+	/* 여섯번째 섹션 #six css */
+
+
 	.siximg2{
 		width: 50%;
 		top: 200px;
@@ -1734,94 +1727,107 @@ footer{
 	.sixlastarrow{
 		display: none;
 	}
-	.videocon{
-		height: 50%;
-	}
+	
 	span.toggleon{
-/*		top: -20px;*/
-font-size: 5em;
-}
-span.toggleoff{
-/*		top: -20px;*/
-font-size: 5em;
-}
-.sevenwrap{
-	width: 90%;	
-}
-.sevencardwrap a{
-	width: 90%;	
-}
-#pl{
-	margin: 0;
+		font-size: 5em;
+	}
+	span.toggleoff{
+		font-size: 5em;
+	}
+	.sevenwrap{
+		width: 90%;	
+	}
+	.sevencardwrap a{
+		width: 90%;	
+	}
 
-	left: 27%;
-}
-.headtext, .headp{
-	width: 70%;
-	color: white;
-	text-align: center;
-	margin: 0 auto;
-}
-.headp{
-	color: gray;
-	margin-top: 5%;
-}
-.sevencardwrap {
-	width: 100%;
-	/*margin-top: 100px;*/
-}
-.sevencardwrap a{
-	width: 100%;
-	margin-top: 50px;
-	overflow: hidden;
-}
-.sevencardwrap a:nth-child(even) {
-	margin-top: 50px;
-}
-.sevencardwrap:nth-of-type(1) a{
-	margin-top: 0px;
-}
+	.headtext, .headp{
+		width: 70%;
+		color: white;
+		text-align: center;
+		margin: 0 auto;
+	}
+	.headp{
+		color: gray;
+		margin-top: 5%;
+	}
 
-.plusbtn a{
-	margin-top: 0;
-}
-.palwrap .headp{
-	margin-bottom: 50px;
-}
-.palqnawrap{
-	padding: 0;
-}
-.palQ {
-	font-size: 16px;
-}
-.palqna:nth-of-type(2){
-	width: 97%;
-	font-size: 14px;
-}
-.footerwrap:nth-of-type(1){
-	display: block;
-}
-.footer1div1 p{
-	font-size: 16px;
-}
-.footer1div1,.footer1div2,.footer1div3{
-	width: 60%;
-	margin-bottom: 50px;
-}
-.footer1div2 p{
-	margin-bottom: 0;
-	padding-bottom: 10px;
-}
-.footerwrap{
-	padding-bottom: 0;
-}
-footer{
-	width: 98%;	
-}
-#topPro h2{
-	font-size: 32px;
-}
-#video-player{
-	margin-left: -50%;
-}
+	/* 일곱번째 섹션 #seven css */
+
+
+	.sevencardwrap {
+		width: 100%;
+	}
+	.sevencardwrap a{
+		width: 100%;
+		margin-top: 50px;
+		overflow: hidden;
+	}
+	.sevencardwrap a:nth-child(even) {
+		margin-top: 50px;
+	}
+	.sevencardwrap:nth-of-type(1) a{
+		margin-top: 0px;
+	}
+
+	.plusbtn a{
+		margin-top: 0;
+	}
+
+
+	/* 여덟번째 섹션 #pal css */
+
+
+	.palwrap .headp{
+		margin-bottom: 50px;
+	}
+	.palqnawrap{
+		padding: 0;
+	}
+	.palQ {
+		font-size: 16px;
+	}
+	.palqna:nth-of-type(2){
+		width: 97%;
+		font-size: 14px;
+	}
+
+
+	/* footer css */
+
+
+	.footerwrap:nth-of-type(1){
+		display: block;
+	}
+	.footer1div1 p{
+		font-size: 16px;
+	}
+	.footer1div1,.footer1div2,.footer1div3{
+		width: 60%;
+		margin-bottom: 50px;
+	}
+	.footer1div2 p{
+		margin-bottom: 0;
+		padding-bottom: 10px;
+	}
+	.footerwrap{
+		padding-bottom: 0;
+	}
+	footer{
+		width: 98%;	
+	}
+	
+
+	/* 배너 비디오 css */
+
+
+	#video-player{
+		margin-left: -50%;
+	}
+
+	#scrollButton{
+		right: 20px;
+		width: 40px;
+		height: 40px;
+	}
 }

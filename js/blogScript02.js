@@ -31,7 +31,8 @@ $(function(){
 	})
 	$('#scrollButton').hide();
 
-      // Show the button when scrolling down 500px
+     
+    /* 스크롤 버튼 스크립트*/
 	$(window).scroll(function () {
 		if ($(this).scrollTop() > 500) {
 			$('#scrollButton').fadeIn();
@@ -40,11 +41,13 @@ $(function(){
 		}
 	});
 
-      // Scroll to the top when the button is clicked
+    
 	$('#scrollButton').click(function () {
 		$('html, body').animate({ scrollTop: 0 }, 800);
 		return false;
 	});
+
+	 /* 카드들 호버시 마우스 위치에 따라 흔들리는 스크립트*/
 	var blogCards = document.querySelectorAll('.blogCard');
 
 	blogCards.forEach(function(blogCard) {
@@ -61,6 +64,8 @@ $(function(){
 			blogCard.style.transform = 'perspective(750px) rotateY(0deg) rotateX(0deg)';
 		});
 	});
+
+	 /* 네비게이션 버튼 클릭시 해당 카드만 보이는 스크립트*/
 	bestpracticesbtn.click(function(){
 		insights.hide();
 		news.hide();
@@ -89,6 +94,8 @@ $(function(){
 		insightsbtn.removeClass('colorg');
 		homebtn.removeClass('colorg');
 	})
+
+	 /* fade in plugin*/
 	AOS.init();
 
 });

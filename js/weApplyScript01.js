@@ -41,6 +41,8 @@ $(function(){
 		$('html, body').animate({scrollTop : 0}, 0);
 		return false;
 	});
+
+	//버튼 클릭시 나타나고 사라지는 스크립트
 	let allj = $(".allj");
 	let alljob = $(".alljob");
 	let allp = $(".allp");
