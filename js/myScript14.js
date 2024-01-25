@@ -1,5 +1,6 @@
 $(function(){
-	// 햄버거 메뉴의 동작
+
+	// 변수 선언
 	let ham = $(".hamburger");
 	let xbtn = $(".close");
 	let	hambermenu = $("#hambermenu");
@@ -36,6 +37,14 @@ $(function(){
 	let ptwo = $(".ptwo");
 	let pthird = $(".pthird");
 	let startTimestamp = null;
+	let more = $("#topPro #mb_blueborderbox_wrap p");
+	let hidemenu = $("#topPro #mb_blueborderbox_wrap div.hide");
+	let palqnawrap = $(".palqnawrap");
+	let palQ = $(".palqnawrap .palQ");
+	let palqna = $(".palqna ");
+	let palQimgboximg = $(".palQimgbox img");
+	let palcopen = $("img.unrotate");
+	let palclose = $("img.rotate");
 
 	//햄버거 메뉴 스크립트
 	xbtn.hide(); 
@@ -72,9 +81,6 @@ $(function(){
 		hd_bluebox.show();
 	});
 	// 섹션 1의 마케팅 디자인 모바일 화면 더보기
-	let more = $("#topPro #mb_blueborderbox_wrap p");
-	let hidemenu = $("#topPro #mb_blueborderbox_wrap div.hide");
-
 	more.click(function(event) {
 		hidemenu.show();
 		more.hide();
@@ -267,18 +273,10 @@ $(function(){
 
 	});
 
-	//fadeIn 되는 플러그인 스크립트
-	AOS.init();
+	
 	
 	
 	//FAQ 질문 나타나고 사라지는 스크립트
-	let palqnawrap = $(".palqnawrap");
-	let palQ = $(".palqnawrap .palQ");
-
-	let palqna = $(".palqna ");
-	let palQimgboximg = $(".palQimgbox img");
-	let palcopen = $("img.unrotate");
-	let palclose = $("img.rotate");
 	for (let i = 1; i <= 11; i += 2) {
 		if (i % 2 !== 0) {
 			palqnawrap.eq(i).hide();
@@ -309,14 +307,16 @@ $(function(){
 	//12/28일 추가된 내용 헤더의 네브바가 스크롤 위로 올릴시 나타나고 내림면 사라지는 스크립트
 	var header = $('#headerdiv');
 	var isFixed = false;
-
+	let imgll = $('.imgfixedhide');
       // Change position based on wheel direction
 	$(window).on("wheel", function (event) {
 		if (event.originalEvent.deltaY > 0 && !isFixed) {
 			header.css('position', 'relative');
+			imgll.css('top',-150);
 			isFixed = true;
 		} else if (event.originalEvent.deltaY < 0 && isFixed) {
 			header.css('position', 'fixed');
+			imgll.css('top',0);
 			isFixed = false;
 		}
 	});
@@ -342,20 +342,23 @@ $(function(){
 		video.hide();
 		
 	});
+	// 스크롤이 2000px만큼 하강시 사라지는 코드
 	$(window).scroll(function(){
-        // 스크롤이 2000px만큼 하강시 사라지는 코드
+        
 		if ($(this).scrollTop() > 2000) {
 			$(".videobtn").fadeOut();
 		} else {
 			$(".videobtn").fadeIn();
 		}
 	});
-
+	//스크롤 버튼 숨기기
 	$('#scrollButton').hide();
 
 
     /* 스크롤 버튼 스크립트*/
 	$(window).scroll(function () {
+		//fadeIn 되는 플러그인 스크립트
+		AOS.init();
 		if ($(this).scrollTop() > 500) {
 			$('#scrollButton').fadeIn();
 		} else {
@@ -365,9 +368,10 @@ $(function(){
 
     /* 스크롤 버튼 스크립트*/
 	$('#scrollButton').click(function () {
-		$('html, body').animate({ scrollTop: 0 }, 800);
+		$('html, body').animate({ scrollTop: 0 }, 300);
 		return false;
 	});
-
+	
+	
 
 });

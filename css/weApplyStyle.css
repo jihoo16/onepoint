@@ -211,7 +211,8 @@ h1{
 	font-size: 16px;
 }
 .tgbtn{
-	width: 100%;	
+	width: 100%;
+	pointer-events: none;
 }
 .tgbtn:hover{
 	background-color: lightgray;
@@ -225,6 +226,7 @@ h1{
 	border-radius: 50px;
 	font-size: 20px;
 	font-weight: bold;
+	pointer-events: none;
 }
 .bbtnspan{
 	margin: 20px 1%;
@@ -240,9 +242,13 @@ h1{
 .chatbtn{
 	height: 48px;
 	border-radius: 100px;
+	pointer-events: none;
 }
 .hiderow button,.smsize button{
 	cursor: default !important	;
+}
+.serchApply{
+	pointer-events: none;
 }
 
 /*#footer 섹션--------------------------------------------------------*/

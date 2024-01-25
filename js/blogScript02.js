@@ -55,8 +55,8 @@ $(function(){
 			var x = e.offsetX;
 			var y = e.offsetY;
 			console.log(x, y);
-			var rotateY = 1 / -9 * x + 20;
-			var rotateX = 1 / -5 * y + 20;
+			var rotateY = (1 / -9 * x + 20)/2;
+			var rotateX = (1 / -9 * y + 20)/2;
 			blogCard.style.transform = `perspective(750px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
 		});
 

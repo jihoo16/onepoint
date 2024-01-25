@@ -139,15 +139,19 @@ header{
 	font-weight: 900;
 	max-width: 1250px;
 	flex-wrap: wrap;
+	justify-content: center;
 }
 .blogwrap a{
 	width: 100%;
+	cursor: auto;
+	pointer-events: none;
 }
 .blogCard{
 	width: 33.3%;
-	padding-left:50px ;
+	padding-left:30px ;
 	margin-bottom: 50px;
 	transition: all 0.3s;
+	max-width: 366.66px;
 }
 .blogCard img{
 	width: 100%;
@@ -304,13 +308,14 @@ footer{
 	}
 	.headerwrap .nav{
 		width: 40%;
-		min-width: 370px;
+		min-width: 450px;
 	}
 	.headerwrap:nth-of-type(2){
 		display: none;
 	}
 	.blogCard{
 		width: 50%;
+		max-width: 396.02px;
 	}
 	.blogCard img{
 		width: 100%;
@@ -391,6 +396,7 @@ footer{
 	.blogCard{
 		width: 100%;
 		padding-left:0px ;
+		max-width: 662.5px;
 	}
 	.blogCard img{
 		width: 100%;
